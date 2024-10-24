@@ -17,19 +17,19 @@
   <Class Name="FinalProject_OOP.Barista">
     <Position X="4.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Barista.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FinalProject_OOP.Customer">
     <Position X="6.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAAAAEAAAAAgEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FinalProject_OOP.Coffee">
-    <Position X="1.5" Y="1.25" Width="1.5" />
+    <Position X="1.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Coffee.cs</FileName>

@@ -22,5 +22,10 @@ namespace FinalProject_OOP
         {
             throw new System.NotImplementedException();
         }
+
+        public void PaysCoffee()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
