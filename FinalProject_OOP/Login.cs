@@ -21,5 +21,10 @@ namespace FinalProject_OOP
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
