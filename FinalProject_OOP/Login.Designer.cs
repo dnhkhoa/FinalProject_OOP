@@ -44,7 +44,7 @@
             this.bgroundLogin.Image = ((System.Drawing.Image)(resources.GetObject("bgroundLogin.Image")));
             this.bgroundLogin.Location = new System.Drawing.Point(0, -1);
             this.bgroundLogin.Name = "bgroundLogin";
-            this.bgroundLogin.Size = new System.Drawing.Size(916, 552);
+            this.bgroundLogin.Size = new System.Drawing.Size(916, 551);
             this.bgroundLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bgroundLogin.TabIndex = 0;
             this.bgroundLogin.TabStop = false;

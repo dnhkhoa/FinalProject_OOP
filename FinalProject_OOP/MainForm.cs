@@ -16,5 +16,10 @@ namespace FinalProject_OOP
         {
             InitializeComponent();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
