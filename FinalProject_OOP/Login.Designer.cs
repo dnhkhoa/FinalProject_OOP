@@ -36,6 +36,7 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.lblOrder = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,11 +111,21 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // lblOrder
+            // 
+            this.lblOrder.AutoSize = true;
+            this.lblOrder.Location = new System.Drawing.Point(170, 390);
+            this.lblOrder.Name = "lblOrder";
+            this.lblOrder.Size = new System.Drawing.Size(137, 16);
+            this.lblOrder.TabIndex = 7;
+            this.lblOrder.Text = "Continue as Customer";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 548);
+            this.Controls.Add(this.lblOrder);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lbPassword);
@@ -142,5 +153,6 @@
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblOrder;
     }
 }
