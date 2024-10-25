@@ -19,7 +19,7 @@ namespace FinalProject_OOP
 
         private void OrderForm_Load(object sender, EventArgs e)
         {
-
+            ComboBox.Items.Add();
         }
 
         private void cbxCategory_SelectedIndexChanged(object sender, EventArgs e)
