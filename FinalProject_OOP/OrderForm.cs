@@ -16,5 +16,20 @@ namespace FinalProject_OOP
         {
             InitializeComponent();
         }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
