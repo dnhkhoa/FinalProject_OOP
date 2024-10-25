@@ -41,13 +41,13 @@
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbQuantity = new System.Windows.Forms.Label();
             this.lbSize = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtItemName = new System.Windows.Forms.TextBox();
+            this.txtSize = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.nudQantity = new System.Windows.Forms.NumericUpDown();
+            this.btnAddCart = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataCart = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,17 +55,17 @@
             this.nudQuantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundExitOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
             this.SuspendLayout();
             // 
             // nudQuantity
             // 
             this.nudQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantity.Controls.Add(this.dataGridView1);
-            this.nudQuantity.Controls.Add(this.numericUpDown1);
-            this.nudQuantity.Controls.Add(this.textBox1);
+            this.nudQuantity.Controls.Add(this.dataCart);
+            this.nudQuantity.Controls.Add(this.nudQantity);
+            this.nudQuantity.Controls.Add(this.txtItemName);
             this.nudQuantity.Controls.Add(this.lbQuantity);
             this.nudQuantity.Controls.Add(this.lbItem);
             this.nudQuantity.Controls.Add(this.bgroundSearchButton);
@@ -190,75 +190,75 @@
             this.lbSize.TabIndex = 10;
             this.lbSize.Text = "Size";
             // 
-            // textBox1
+            // txtItemName
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 22);
-            this.textBox1.TabIndex = 11;
+            this.txtItemName.Location = new System.Drawing.Point(283, 103);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(157, 22);
+            this.txtItemName.TabIndex = 11;
             // 
-            // textBox2
+            // txtSize
             // 
-            this.textBox2.Location = new System.Drawing.Point(275, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 22);
-            this.textBox2.TabIndex = 12;
+            this.txtSize.Location = new System.Drawing.Point(275, 68);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(157, 22);
+            this.txtSize.TabIndex = 12;
             // 
-            // textBox3
+            // txtPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(275, 146);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 22);
-            this.textBox3.TabIndex = 13;
+            this.txtPrice.Location = new System.Drawing.Point(275, 146);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(157, 22);
+            this.txtPrice.TabIndex = 13;
             // 
-            // numericUpDown1
+            // nudQantity
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(283, 181);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(157, 22);
-            this.numericUpDown1.TabIndex = 14;
+            this.nudQantity.Location = new System.Drawing.Point(283, 181);
+            this.nudQantity.Name = "nudQantity";
+            this.nudQantity.Size = new System.Drawing.Size(157, 22);
+            this.nudQantity.TabIndex = 14;
             // 
-            // button1
+            // btnAddCart
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(314, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 37);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Add to Cart";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAddCart.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddCart.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCart.ForeColor = System.Drawing.Color.White;
+            this.btnAddCart.Location = new System.Drawing.Point(314, 189);
+            this.btnAddCart.Name = "btnAddCart";
+            this.btnAddCart.Size = new System.Drawing.Size(118, 37);
+            this.btnAddCart.TabIndex = 15;
+            this.btnAddCart.Text = "Add to Cart";
+            this.btnAddCart.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnAddCart);
             this.panel1.Controls.Add(this.lbSize);
             this.panel1.Controls.Add(this.lbPrice);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtSize);
+            this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Location = new System.Drawing.Point(240, 35);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 244);
             this.panel1.TabIndex = 16;
             // 
-            // dataGridView1
+            // dataCart
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataCart.BackgroundColor = System.Drawing.Color.White;
+            this.dataCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(240, 285);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(460, 145);
-            this.dataGridView1.TabIndex = 17;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataCart.Location = new System.Drawing.Point(240, 285);
+            this.dataCart.Name = "dataCart";
+            this.dataCart.RowHeadersWidth = 51;
+            this.dataCart.RowTemplate.Height = 24;
+            this.dataCart.Size = new System.Drawing.Size(460, 145);
+            this.dataCart.TabIndex = 17;
+            this.dataCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -303,10 +303,10 @@
             this.nudQuantity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundExitOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,13 +325,13 @@
         private System.Windows.Forms.Label lbQuantity;
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbItem;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtSize;
+        private System.Windows.Forms.TextBox txtItemName;
+        private System.Windows.Forms.NumericUpDown nudQantity;
+        private System.Windows.Forms.Button btnAddCart;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
