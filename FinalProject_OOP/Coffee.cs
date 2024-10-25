@@ -6,29 +6,11 @@ using System.Text;
 namespace FinalProject_OOP
 {
     public class Coffee
-    {
-        public string coffeeType
-        {
-            get => default;
-            set
-            {
-            }
-        }
+    {   
+        public string coffeeName { get; set; }
+        public string coffeeType { get; set; }
 
-        public string size
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public double price
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string size { get; set; }
+        public double price { get; set; }
     }
 }
