@@ -122,6 +122,7 @@
             this.lbOrder.Size = new System.Drawing.Size(168, 20);
             this.lbOrder.TabIndex = 7;
             this.lbOrder.Text = "Continue as customer";
+            this.lbOrder.Click += new System.EventHandler(this.lbOrder_Click);
             // 
             // frmLogin
             // 

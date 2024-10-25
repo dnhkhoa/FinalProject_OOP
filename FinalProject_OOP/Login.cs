@@ -60,5 +60,12 @@ namespace FinalProject_OOP
                 txtPassword.Focus();
             }
         }
+
+        private void lbOrder_Click(object sender, EventArgs e)
+        {
+            OrderForm mainForm = new OrderForm();
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }

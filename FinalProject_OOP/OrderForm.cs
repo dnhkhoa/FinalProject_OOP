@@ -31,5 +31,15 @@ namespace FinalProject_OOP
         {
 
         }
+
+        private void nudQuantity_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bgroundExitOrder_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
