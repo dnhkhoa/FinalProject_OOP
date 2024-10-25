@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="FinalProject_OOP.Manager">
-    <Position X="8.25" Y="3.5" Width="1.5" />
+    <Position X="8.25" Y="3.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
@@ -22,7 +22,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="FinalProject_OOP.Customer">
-    <Position X="6.25" Y="3.5" Width="1.5" />
+    <Position X="6.25" Y="3.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAEAAAAAgEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Customer.cs</FileName>

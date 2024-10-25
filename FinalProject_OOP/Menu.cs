@@ -9,10 +9,10 @@ namespace FinalProject_OOP
     {
         public static List<Coffee> Coffees = new List<Coffee>
         {
-        new Coffee("Espresso", 2.5),
-        new Coffee("Latte", 3.5),
-        new Coffee("Cappuccino", 4.5),
-        new Coffee("Americano", 2.0)
+        new Coffee("Espresso", 30000),
+        new Coffee("Latte", 35000),
+        new Coffee("Cappuccino", 45000),
+        new Coffee("Americano", 25000)
         };
     }
 }
