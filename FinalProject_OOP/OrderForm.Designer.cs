@@ -50,8 +50,8 @@
             this.btnAddCart = new System.Windows.Forms.Button();
             this.lbSize = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
-            this.txtSize = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
+            this.cbxSize = new System.Windows.Forms.ComboBox();
             this.nudQuantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
@@ -201,9 +201,6 @@
             // cbxCategory
             // 
             this.cbxCategory.FormattingEnabled = true;
-            this.cbxCategory.Items.AddRange(new object[] {
-            "Drink",
-            "Cake"});
             this.cbxCategory.Location = new System.Drawing.Point(25, 103);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(174, 24);
@@ -234,10 +231,10 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbxSize);
             this.panel1.Controls.Add(this.btnAddCart);
             this.panel1.Controls.Add(this.lbSize);
             this.panel1.Controls.Add(this.lbPrice);
-            this.panel1.Controls.Add(this.txtSize);
             this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Location = new System.Drawing.Point(240, 35);
             this.panel1.Name = "panel1";
@@ -276,19 +273,21 @@
             this.lbPrice.TabIndex = 8;
             this.lbPrice.Text = "Price";
             // 
-            // txtSize
-            // 
-            this.txtSize.Location = new System.Drawing.Point(275, 68);
-            this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(157, 22);
-            this.txtSize.TabIndex = 12;
-            // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(275, 146);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
+            // 
+            // cbxSize
+            // 
+            this.cbxSize.FormattingEnabled = true;
+            this.cbxSize.Location = new System.Drawing.Point(275, 65);
+            this.cbxSize.Name = "cbxSize";
+            this.cbxSize.Size = new System.Drawing.Size(157, 24);
+            this.cbxSize.TabIndex = 18;
+            this.cbxSize.SelectedIndexChanged += new System.EventHandler(this.cbxSize_SelectedIndexChanged);
             // 
             // OrderForm
             // 
@@ -328,7 +327,6 @@
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbItem;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.NumericUpDown nudQantity;
         private System.Windows.Forms.Button btnAddCart;
@@ -338,5 +336,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ComboBox cbxSize;
     }
 }
