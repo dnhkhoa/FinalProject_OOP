@@ -47,11 +47,11 @@
             this.lbCategory = new System.Windows.Forms.Label();
             this.lbPlaceOrder = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbxSize = new System.Windows.Forms.ComboBox();
             this.btnAddCart = new System.Windows.Forms.Button();
             this.lbSize = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.cbxSize = new System.Windows.Forms.ComboBox();
             this.nudQuantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
@@ -206,7 +206,6 @@
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(174, 24);
             this.cbxCategory.TabIndex = 2;
-            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_SelectedIndexChanged);
             // 
             // lbCategory
             // 
@@ -242,14 +241,23 @@
             this.panel1.Size = new System.Drawing.Size(460, 244);
             this.panel1.TabIndex = 16;
             // 
+            // cbxSize
+            // 
+            this.cbxSize.FormattingEnabled = true;
+            this.cbxSize.Location = new System.Drawing.Point(275, 65);
+            this.cbxSize.Name = "cbxSize";
+            this.cbxSize.Size = new System.Drawing.Size(157, 24);
+            this.cbxSize.TabIndex = 18;
+            this.cbxSize.SelectedIndexChanged += new System.EventHandler(this.cbxSize_SelectedIndexChanged);
+            // 
             // btnAddCart
             // 
             this.btnAddCart.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnAddCart.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddCart.Location = new System.Drawing.Point(314, 189);
+            this.btnAddCart.Location = new System.Drawing.Point(291, 187);
             this.btnAddCart.Name = "btnAddCart";
-            this.btnAddCart.Size = new System.Drawing.Size(118, 37);
+            this.btnAddCart.Size = new System.Drawing.Size(141, 37);
             this.btnAddCart.TabIndex = 15;
             this.btnAddCart.Text = "Add to Cart";
             this.btnAddCart.UseVisualStyleBackColor = false;
@@ -280,15 +288,6 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
-            // 
-            // cbxSize
-            // 
-            this.cbxSize.FormattingEnabled = true;
-            this.cbxSize.Location = new System.Drawing.Point(275, 65);
-            this.cbxSize.Name = "cbxSize";
-            this.cbxSize.Size = new System.Drawing.Size(157, 24);
-            this.cbxSize.TabIndex = 18;
-            this.cbxSize.SelectedIndexChanged += new System.EventHandler(this.cbxSize_SelectedIndexChanged);
             // 
             // OrderForm
             // 
