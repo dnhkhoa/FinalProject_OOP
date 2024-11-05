@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FinalProject_OOP;
 
 namespace FinalProject_OOP
 {
@@ -18,14 +19,14 @@ namespace FinalProject_OOP
             string size = cbxSize.SelectedItem.ToString();
 
             // Tìm thức uống đã chọn từ danh sách
-            var selectedCoffee = Menu.Find(Coffee => Coffee.coffeeName == txtItemName.Text);
+            //var selectedCoffee = Menu.Find(Coffee => Coffee.coffeeName == txtItemName.Text);
 
-            // Nếu tìm thấy thức uống, tính giá theo kích thước
-            if (selectedCoffee != null)
-            {
-                double price = selectedCoffee.PriceBySize(size);
-                txtPrice.Text = price.ToString("C"); // Hiển thị dưới dạng tiền tệ
-            }
+            //// Nếu tìm thấy thức uống, tính giá theo kích thước
+            //if (selectedCoffee != null)
+            //{
+            //    double price = selectedCoffee.PriceBySize(size);
+            //    txtPrice.Text = price.ToString("C"); // Hiển thị dưới dạng tiền tệ
+            //}
         }
         public OrderForm()
         {
@@ -41,9 +42,18 @@ namespace FinalProject_OOP
             cbxSize.Items.Add("Large");
         }
 
-        private void cbxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxCategory_SelectedInxdexChanged(object sender, EventArgs e)
         {
-
+            
+                string category = cbxCategory.Text;
+                if (category == "Drinks")
+                {
+                    foreach (var coffee in Menu.Coffees)
+                    {
+                        lstOrder.Items.Add(coffee.CoffeeName);
+                    }
+                }
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -65,6 +75,11 @@ namespace FinalProject_OOP
         {
             // Tính lại giá khi thay đổi kích thước
             UpdatePrice();
+        }
+
+        private void lstOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

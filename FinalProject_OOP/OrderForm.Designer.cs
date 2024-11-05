@@ -190,6 +190,7 @@
             this.lstOrder.Name = "lstOrder";
             this.lstOrder.Size = new System.Drawing.Size(174, 308);
             this.lstOrder.TabIndex = 4;
+            this.lstOrder.SelectedIndexChanged += new System.EventHandler(this.lstOrder_SelectedIndexChanged);
             // 
             // txtSearch
             // 
