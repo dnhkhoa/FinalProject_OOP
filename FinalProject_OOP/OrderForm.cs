@@ -18,14 +18,14 @@ namespace FinalProject_OOP
             // Lấy kích thước đã chọn
             string size = cbxSize.SelectedItem.ToString();
 
-            // Tìm thức uống đã chọn từ danh sách
-            //var selectedCoffee = Menu.Find(Coffee => Coffee.coffeeName == txtItemName.Text);
+            // tìm thức uống đã chọn từ danh sách
+            //var selectedcoffee = menu.find(coffee => coffee.coffeename == txtitemname.text);
 
-            //// Nếu tìm thấy thức uống, tính giá theo kích thước
-            //if (selectedCoffee != null)
+            //// nếu tìm thấy thức uống, tính giá theo kích thước
+            //if (selectedcoffee != null)
             //{
-            //    double price = selectedCoffee.PriceBySize(size);
-            //    txtPrice.Text = price.ToString("C"); // Hiển thị dưới dạng tiền tệ
+            //    double price = selectedcoffee.pricebysize(size);
+            //    txtprice.text = price.tostring("c"); // hiển thị dưới dạng tiền tệ
             //}
         }
         public OrderForm()
@@ -44,16 +44,25 @@ namespace FinalProject_OOP
 
         private void cbxCategory_SelectedInxdexChanged(object sender, EventArgs e)
         {
-            
-                string category = cbxCategory.Text;
-                if (category == "Drinks")
+            lstOrder.Items.Clear();
+
+            string category = cbxCategory.Text;
+
+            if (category == "Drinks")
+            {
+                if (MenuShop.Coffees != null && MenuShop.Coffees.Count > 0)
                 {
-                    foreach (var coffee in Menu.Coffees)
+                    foreach (var coffee in MenuShop.Coffees)
                     {
                         lstOrder.Items.Add(coffee.CoffeeName);
                     }
                 }
-            
+                else
+                {
+                    MessageBox.Show("No coffee items found.");
+                }
+            }
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FinalProject_OOP
 {
-    public static class Menu
+    public static class MenuShop
     {
         public static List<Coffee> Coffees = new List<Coffee>
         {
