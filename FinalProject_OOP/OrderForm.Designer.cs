@@ -65,10 +65,6 @@
             this.nudQuantity.BackColor = System.Drawing.Color.LightSteelBlue;
             this.nudQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudQuantity.Controls.Add(this.dataCart);
-            this.nudQuantity.Controls.Add(this.nudQantity);
-            this.nudQuantity.Controls.Add(this.txtItemName);
-            this.nudQuantity.Controls.Add(this.lbQuantity);
-            this.nudQuantity.Controls.Add(this.lbItem);
             this.nudQuantity.Controls.Add(this.bgroundSearchButton);
             this.nudQuantity.Controls.Add(this.bgroundExitOrder);
             this.nudQuantity.Controls.Add(this.lstOrder);
@@ -79,7 +75,7 @@
             this.nudQuantity.Controls.Add(this.panel1);
             this.nudQuantity.Location = new System.Drawing.Point(13, 13);
             this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(726, 532);
+            this.nudQuantity.Size = new System.Drawing.Size(891, 526);
             this.nudQuantity.TabIndex = 0;
             this.nudQuantity.Paint += new System.Windows.Forms.PaintEventHandler(this.nudQuantity_Paint);
             // 
@@ -96,7 +92,7 @@
             this.dataCart.Name = "dataCart";
             this.dataCart.RowHeadersWidth = 51;
             this.dataCart.RowTemplate.Height = 24;
-            this.dataCart.Size = new System.Drawing.Size(460, 145);
+            this.dataCart.Size = new System.Drawing.Size(614, 132);
             this.dataCart.TabIndex = 17;
             this.dataCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -130,14 +126,14 @@
             // 
             // nudQantity
             // 
-            this.nudQantity.Location = new System.Drawing.Point(283, 181);
+            this.nudQantity.Location = new System.Drawing.Point(168, 118);
             this.nudQantity.Name = "nudQantity";
             this.nudQantity.Size = new System.Drawing.Size(157, 22);
             this.nudQantity.TabIndex = 14;
             // 
             // txtItemName
             // 
-            this.txtItemName.Location = new System.Drawing.Point(283, 103);
+            this.txtItemName.Location = new System.Drawing.Point(168, 41);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(157, 22);
             this.txtItemName.TabIndex = 11;
@@ -146,7 +142,7 @@
             // 
             this.lbQuantity.AutoSize = true;
             this.lbQuantity.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuantity.Location = new System.Drawing.Point(277, 146);
+            this.lbQuantity.Location = new System.Drawing.Point(25, 109);
             this.lbQuantity.Name = "lbQuantity";
             this.lbQuantity.Size = new System.Drawing.Size(110, 32);
             this.lbQuantity.TabIndex = 9;
@@ -156,7 +152,7 @@
             // 
             this.lbItem.AutoSize = true;
             this.lbItem.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbItem.Location = new System.Drawing.Point(277, 68);
+            this.lbItem.Location = new System.Drawing.Point(14, 32);
             this.lbItem.Name = "lbItem";
             this.lbItem.Size = new System.Drawing.Size(137, 32);
             this.lbItem.TabIndex = 7;
@@ -175,7 +171,7 @@
             // bgroundExitOrder
             // 
             this.bgroundExitOrder.Image = ((System.Drawing.Image)(resources.GetObject("bgroundExitOrder.Image")));
-            this.bgroundExitOrder.Location = new System.Drawing.Point(696, -2);
+            this.bgroundExitOrder.Location = new System.Drawing.Point(860, -2);
             this.bgroundExitOrder.Name = "bgroundExitOrder";
             this.bgroundExitOrder.Size = new System.Drawing.Size(30, 31);
             this.bgroundExitOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,19 +229,23 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cbxSize);
+            this.panel1.Controls.Add(this.nudQantity);
             this.panel1.Controls.Add(this.btnAddCart);
+            this.panel1.Controls.Add(this.lbQuantity);
+            this.panel1.Controls.Add(this.txtItemName);
+            this.panel1.Controls.Add(this.lbItem);
             this.panel1.Controls.Add(this.lbSize);
             this.panel1.Controls.Add(this.lbPrice);
             this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Location = new System.Drawing.Point(240, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 244);
+            this.panel1.Size = new System.Drawing.Size(614, 244);
             this.panel1.TabIndex = 16;
             // 
             // cbxSize
             // 
             this.cbxSize.FormattingEnabled = true;
-            this.cbxSize.Location = new System.Drawing.Point(275, 65);
+            this.cbxSize.Location = new System.Drawing.Point(422, 41);
             this.cbxSize.Name = "cbxSize";
             this.cbxSize.Size = new System.Drawing.Size(157, 24);
             this.cbxSize.TabIndex = 18;
@@ -253,12 +253,12 @@
             // 
             // btnAddCart
             // 
-            this.btnAddCart.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddCart.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAddCart.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddCart.Location = new System.Drawing.Point(291, 187);
+            this.btnAddCart.Location = new System.Drawing.Point(235, 186);
             this.btnAddCart.Name = "btnAddCart";
-            this.btnAddCart.Size = new System.Drawing.Size(141, 37);
+            this.btnAddCart.Size = new System.Drawing.Size(157, 37);
             this.btnAddCart.TabIndex = 15;
             this.btnAddCart.Text = "Add to Cart";
             this.btnAddCart.UseVisualStyleBackColor = false;
@@ -267,7 +267,7 @@
             // 
             this.lbSize.AutoSize = true;
             this.lbSize.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSize.Location = new System.Drawing.Point(269, 33);
+            this.lbSize.Location = new System.Drawing.Point(355, 34);
             this.lbSize.Name = "lbSize";
             this.lbSize.Size = new System.Drawing.Size(61, 32);
             this.lbSize.TabIndex = 10;
@@ -277,7 +277,7 @@
             // 
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(269, 111);
+            this.lbPrice.Location = new System.Drawing.Point(348, 109);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(68, 32);
             this.lbPrice.TabIndex = 8;
@@ -285,7 +285,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(275, 146);
+            this.txtPrice.Location = new System.Drawing.Point(422, 117);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
@@ -295,7 +295,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(752, 557);
+            this.ClientSize = new System.Drawing.Size(916, 551);
             this.Controls.Add(this.nudQuantity);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OrderForm";
