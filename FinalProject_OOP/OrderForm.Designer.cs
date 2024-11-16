@@ -62,6 +62,7 @@
             // 
             // nudQuantity
             // 
+            this.nudQuantity.BackColor = System.Drawing.Color.LightSteelBlue;
             this.nudQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudQuantity.Controls.Add(this.dataCart);
             this.nudQuantity.Controls.Add(this.nudQantity);
@@ -293,6 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(752, 557);
             this.Controls.Add(this.nudQuantity);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
