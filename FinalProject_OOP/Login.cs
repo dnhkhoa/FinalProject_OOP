@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace FinalProject_OOP
 {
     public partial class frmLogin : Form
     {
+        SqlConnection Con =new SqlConnection(@"Data Source=KHANG;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
