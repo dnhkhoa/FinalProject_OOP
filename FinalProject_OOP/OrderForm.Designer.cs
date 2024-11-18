@@ -35,10 +35,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nudQantity = new System.Windows.Forms.NumericUpDown();
-            this.txtItemName = new System.Windows.Forms.TextBox();
-            this.lbQuantity = new System.Windows.Forms.Label();
-            this.lbItem = new System.Windows.Forms.Label();
             this.bgroundSearchButton = new System.Windows.Forms.PictureBox();
             this.bgroundExitOrder = new System.Windows.Forms.PictureBox();
             this.lstOrder = new System.Windows.Forms.ListBox();
@@ -48,22 +44,29 @@
             this.lbPlaceOrder = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbxSize = new System.Windows.Forms.ComboBox();
+            this.nudQantity = new System.Windows.Forms.NumericUpDown();
             this.btnAddCart = new System.Windows.Forms.Button();
+            this.lbQuantity = new System.Windows.Forms.Label();
+            this.txtItemName = new System.Windows.Forms.TextBox();
+            this.lbItem = new System.Windows.Forms.Label();
             this.lbSize = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
+            this.bgroundBackOrder = new System.Windows.Forms.PictureBox();
             this.nudQuantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundExitOrder)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bgroundBackOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // nudQuantity
             // 
             this.nudQuantity.BackColor = System.Drawing.Color.LightSteelBlue;
             this.nudQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudQuantity.Controls.Add(this.bgroundBackOrder);
             this.nudQuantity.Controls.Add(this.dataCart);
             this.nudQuantity.Controls.Add(this.bgroundSearchButton);
             this.nudQuantity.Controls.Add(this.bgroundExitOrder);
@@ -124,40 +127,6 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 98;
             // 
-            // nudQantity
-            // 
-            this.nudQantity.Location = new System.Drawing.Point(168, 118);
-            this.nudQantity.Name = "nudQantity";
-            this.nudQantity.Size = new System.Drawing.Size(157, 22);
-            this.nudQantity.TabIndex = 14;
-            // 
-            // txtItemName
-            // 
-            this.txtItemName.Location = new System.Drawing.Point(168, 41);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(157, 22);
-            this.txtItemName.TabIndex = 11;
-            // 
-            // lbQuantity
-            // 
-            this.lbQuantity.AutoSize = true;
-            this.lbQuantity.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuantity.Location = new System.Drawing.Point(25, 109);
-            this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(110, 32);
-            this.lbQuantity.TabIndex = 9;
-            this.lbQuantity.Text = "Quantity";
-            // 
-            // lbItem
-            // 
-            this.lbItem.AutoSize = true;
-            this.lbItem.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbItem.Location = new System.Drawing.Point(14, 32);
-            this.lbItem.Name = "lbItem";
-            this.lbItem.Size = new System.Drawing.Size(137, 32);
-            this.lbItem.TabIndex = 7;
-            this.lbItem.Text = "Item Name";
-            // 
             // bgroundSearchButton
             // 
             this.bgroundSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("bgroundSearchButton.Image")));
@@ -173,7 +142,7 @@
             this.bgroundExitOrder.Image = ((System.Drawing.Image)(resources.GetObject("bgroundExitOrder.Image")));
             this.bgroundExitOrder.Location = new System.Drawing.Point(860, -2);
             this.bgroundExitOrder.Name = "bgroundExitOrder";
-            this.bgroundExitOrder.Size = new System.Drawing.Size(30, 31);
+            this.bgroundExitOrder.Size = new System.Drawing.Size(30, 30);
             this.bgroundExitOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bgroundExitOrder.TabIndex = 5;
             this.bgroundExitOrder.TabStop = false;
@@ -251,6 +220,13 @@
             this.cbxSize.TabIndex = 18;
             this.cbxSize.SelectedIndexChanged += new System.EventHandler(this.cbxSize_SelectedIndexChanged);
             // 
+            // nudQantity
+            // 
+            this.nudQantity.Location = new System.Drawing.Point(168, 118);
+            this.nudQantity.Name = "nudQantity";
+            this.nudQantity.Size = new System.Drawing.Size(157, 22);
+            this.nudQantity.TabIndex = 14;
+            // 
             // btnAddCart
             // 
             this.btnAddCart.BackColor = System.Drawing.Color.DodgerBlue;
@@ -262,6 +238,33 @@
             this.btnAddCart.TabIndex = 15;
             this.btnAddCart.Text = "Add to Cart";
             this.btnAddCart.UseVisualStyleBackColor = false;
+            // 
+            // lbQuantity
+            // 
+            this.lbQuantity.AutoSize = true;
+            this.lbQuantity.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuantity.Location = new System.Drawing.Point(25, 109);
+            this.lbQuantity.Name = "lbQuantity";
+            this.lbQuantity.Size = new System.Drawing.Size(110, 32);
+            this.lbQuantity.TabIndex = 9;
+            this.lbQuantity.Text = "Quantity";
+            // 
+            // txtItemName
+            // 
+            this.txtItemName.Location = new System.Drawing.Point(168, 41);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(157, 22);
+            this.txtItemName.TabIndex = 11;
+            // 
+            // lbItem
+            // 
+            this.lbItem.AutoSize = true;
+            this.lbItem.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbItem.Location = new System.Drawing.Point(14, 32);
+            this.lbItem.Name = "lbItem";
+            this.lbItem.Size = new System.Drawing.Size(137, 32);
+            this.lbItem.TabIndex = 7;
+            this.lbItem.Text = "Item Name";
             // 
             // lbSize
             // 
@@ -290,6 +293,17 @@
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
             // 
+            // bgroundBackOrder
+            // 
+            this.bgroundBackOrder.Image = ((System.Drawing.Image)(resources.GetObject("bgroundBackOrder.Image")));
+            this.bgroundBackOrder.Location = new System.Drawing.Point(824, -2);
+            this.bgroundBackOrder.Name = "bgroundBackOrder";
+            this.bgroundBackOrder.Size = new System.Drawing.Size(30, 30);
+            this.bgroundBackOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bgroundBackOrder.TabIndex = 18;
+            this.bgroundBackOrder.TabStop = false;
+            this.bgroundBackOrder.Click += new System.EventHandler(this.bgroundBackOrder_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -305,11 +319,12 @@
             this.nudQuantity.ResumeLayout(false);
             this.nudQuantity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundExitOrder)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bgroundBackOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,5 +354,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.ComboBox cbxSize;
+        private System.Windows.Forms.PictureBox bgroundBackOrder;
     }
 }
