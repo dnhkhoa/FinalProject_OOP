@@ -13,7 +13,7 @@ namespace FinalProject_OOP
 {
     public partial class frmLogin : Form
     {
-        SqlConnection Con =new SqlConnection(@"Data Source=KHANG;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+        
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
@@ -29,8 +29,8 @@ namespace FinalProject_OOP
         {
             InitializeComponent();
         }
+        //SqlConnection Con = new SqlConnection(@"Data Source=KHANG;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
-       
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
