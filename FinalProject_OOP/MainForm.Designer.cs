@@ -31,22 +31,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnAddItems = new System.Windows.Forms.Button();
+            this.btnUpdateItems = new System.Windows.Forms.Button();
+            this.btnRemoveItems = new System.Windows.Forms.Button();
+            this.btnPersonel = new System.Windows.Forms.Button();
+            this.btnIncome = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnIncome);
+            this.panel1.Controls.Add(this.btnPersonel);
+            this.panel1.Controls.Add(this.btnRemoveItems);
+            this.panel1.Controls.Add(this.btnUpdateItems);
+            this.panel1.Controls.Add(this.btnAddItems);
             this.panel1.Controls.Add(this.btnPlaceOrder);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -73,65 +73,65 @@
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAddItems
             // 
-            this.button2.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.button2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button2.Location = new System.Drawing.Point(14, 117);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 54);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Add Items";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddItems.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnAddItems.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItems.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnAddItems.Location = new System.Drawing.Point(14, 117);
+            this.btnAddItems.Name = "btnAddItems";
+            this.btnAddItems.Size = new System.Drawing.Size(202, 54);
+            this.btnAddItems.TabIndex = 1;
+            this.btnAddItems.Text = "Add Items";
+            this.btnAddItems.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnUpdateItems
             // 
-            this.button3.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.button3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button3.Location = new System.Drawing.Point(14, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(202, 54);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Update Items";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnUpdateItems.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnUpdateItems.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateItems.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnUpdateItems.Location = new System.Drawing.Point(14, 188);
+            this.btnUpdateItems.Name = "btnUpdateItems";
+            this.btnUpdateItems.Size = new System.Drawing.Size(202, 54);
+            this.btnUpdateItems.TabIndex = 2;
+            this.btnUpdateItems.Text = "Update Items";
+            this.btnUpdateItems.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnRemoveItems
             // 
-            this.button4.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.button4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button4.Location = new System.Drawing.Point(14, 258);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(202, 54);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Remove Items";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRemoveItems.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnRemoveItems.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveItems.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnRemoveItems.Location = new System.Drawing.Point(14, 258);
+            this.btnRemoveItems.Name = "btnRemoveItems";
+            this.btnRemoveItems.Size = new System.Drawing.Size(202, 54);
+            this.btnRemoveItems.TabIndex = 3;
+            this.btnRemoveItems.Text = "Remove Items";
+            this.btnRemoveItems.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnPersonel
             // 
-            this.button5.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.button5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button5.Location = new System.Drawing.Point(14, 327);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(202, 54);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Personel";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnPersonel.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnPersonel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonel.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnPersonel.Location = new System.Drawing.Point(14, 327);
+            this.btnPersonel.Name = "btnPersonel";
+            this.btnPersonel.Size = new System.Drawing.Size(202, 54);
+            this.btnPersonel.TabIndex = 4;
+            this.btnPersonel.Text = "Personel";
+            this.btnPersonel.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnIncome
             // 
-            this.button6.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.button6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button6.Location = new System.Drawing.Point(14, 400);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(202, 54);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Income";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnIncome.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnIncome.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncome.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnIncome.Location = new System.Drawing.Point(14, 400);
+            this.btnIncome.Name = "btnIncome";
+            this.btnIncome.Size = new System.Drawing.Size(202, 54);
+            this.btnIncome.TabIndex = 5;
+            this.btnIncome.Text = "Income";
+            this.btnIncome.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -155,11 +155,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnIncome;
+        private System.Windows.Forms.Button btnPersonel;
+        private System.Windows.Forms.Button btnRemoveItems;
+        private System.Windows.Forms.Button btnUpdateItems;
+        private System.Windows.Forms.Button btnAddItems;
         private System.Windows.Forms.Button btnPlaceOrder;
     }
 }
