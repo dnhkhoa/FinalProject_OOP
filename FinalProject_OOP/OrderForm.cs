@@ -75,10 +75,9 @@ namespace FinalProject_OOP
 
         }
 
-        private void bgroundExitOrder_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        //private void bgroundExitOrder_Click(object sender, EventArgs e)
+        //{
+        //}
 
         private void cbxSize_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -91,11 +90,20 @@ namespace FinalProject_OOP
            
         }
 
-        private void bgroundBackOrder_Click(object sender, EventArgs e)
+        //private void bgroundBackOrder_Click(object sender, EventArgs e)
+        //{ 
+        //}
+
+        private void linklblLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmLogin mainForm = new frmLogin();
             mainForm.Show();
             this.Hide();
+        }
+
+        private void btnExitOrder_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

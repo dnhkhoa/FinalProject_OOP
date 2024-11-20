@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIncome = new System.Windows.Forms.Button();
             this.btnPersonel = new System.Windows.Forms.Button();
@@ -37,18 +36,16 @@
             this.btnAddItems = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bgroundExitMain = new System.Windows.Forms.PictureBox();
-            this.bgroundBackMain = new System.Windows.Forms.PictureBox();
+            this.linklblLogOut = new System.Windows.Forms.LinkLabel();
+            this.btnExitMain = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bgroundExitMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bgroundBackMain)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
-            this.panel1.Controls.Add(this.bgroundBackMain);
-            this.panel1.Controls.Add(this.bgroundExitMain);
+            this.panel1.Controls.Add(this.btnExitMain);
+            this.panel1.Controls.Add(this.linklblLogOut);
             this.panel1.Controls.Add(this.btnIncome);
             this.panel1.Controls.Add(this.btnPersonel);
             this.panel1.Controls.Add(this.btnRemoveItems);
@@ -140,27 +137,30 @@
             this.panel2.Size = new System.Drawing.Size(690, 527);
             this.panel2.TabIndex = 1;
             // 
-            // bgroundExitMain
+            // linklblLogOut
             // 
-            this.bgroundExitMain.Image = ((System.Drawing.Image)(resources.GetObject("bgroundExitMain.Image")));
-            this.bgroundExitMain.Location = new System.Drawing.Point(3, 3);
-            this.bgroundExitMain.Name = "bgroundExitMain";
-            this.bgroundExitMain.Size = new System.Drawing.Size(30, 30);
-            this.bgroundExitMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bgroundExitMain.TabIndex = 6;
-            this.bgroundExitMain.TabStop = false;
-            this.bgroundExitMain.Click += new System.EventHandler(this.bgroundExitMain_Click);
+            this.linklblLogOut.AutoSize = true;
+            this.linklblLogOut.Font = new System.Drawing.Font("Century", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblLogOut.Location = new System.Drawing.Point(65, 482);
+            this.linklblLogOut.Name = "linklblLogOut";
+            this.linklblLogOut.Size = new System.Drawing.Size(75, 21);
+            this.linklblLogOut.TabIndex = 8;
+            this.linklblLogOut.TabStop = true;
+            this.linklblLogOut.Text = "LogOut";
+            this.linklblLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLogOut_LinkClicked);
             // 
-            // bgroundBackMain
+            // btnExitMain
             // 
-            this.bgroundBackMain.Image = ((System.Drawing.Image)(resources.GetObject("bgroundBackMain.Image")));
-            this.bgroundBackMain.Location = new System.Drawing.Point(39, 3);
-            this.bgroundBackMain.Name = "bgroundBackMain";
-            this.bgroundBackMain.Size = new System.Drawing.Size(30, 30);
-            this.bgroundBackMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bgroundBackMain.TabIndex = 7;
-            this.bgroundBackMain.TabStop = false;
-            this.bgroundBackMain.Click += new System.EventHandler(this.bgroundBackMain_Click);
+            this.btnExitMain.BackColor = System.Drawing.Color.Tan;
+            this.btnExitMain.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitMain.Location = new System.Drawing.Point(3, 3);
+            this.btnExitMain.Name = "btnExitMain";
+            this.btnExitMain.Size = new System.Drawing.Size(30, 30);
+            this.btnExitMain.TabIndex = 9;
+            this.btnExitMain.Text = "X";
+            this.btnExitMain.UseVisualStyleBackColor = false;
+            this.btnExitMain.Click += new System.EventHandler(this.btnExitMain_Click);
             // 
             // MainForm
             // 
@@ -176,8 +176,7 @@
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bgroundExitMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bgroundBackMain)).EndInit();
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -192,8 +191,8 @@
         private System.Windows.Forms.Button btnUpdateItems;
         private System.Windows.Forms.Button btnAddItems;
         private System.Windows.Forms.Button btnPlaceOrder;
-        private System.Windows.Forms.PictureBox bgroundExitMain;
-        private System.Windows.Forms.PictureBox bgroundBackMain;
+        private System.Windows.Forms.LinkLabel linklblLogOut;
+        private System.Windows.Forms.Button btnExitMain;
     }
 }
 

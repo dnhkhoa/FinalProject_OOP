@@ -56,10 +56,10 @@
             // 
             this.lbLogin.AutoSize = true;
             this.lbLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lbLogin.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogin.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogin.Location = new System.Drawing.Point(128, 94);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(221, 34);
+            this.lbLogin.Size = new System.Drawing.Size(215, 34);
             this.lbLogin.TabIndex = 1;
             this.lbLogin.Text = "Ready to Login";
             // 

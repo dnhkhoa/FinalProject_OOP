@@ -22,16 +22,24 @@ namespace FinalProject_OOP
 
         }
 
-        private void bgroundExitMain_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        //private void bgroundExitMain_Click(object sender, EventArgs e)
+        //{
+        //}
 
-        private void bgroundBackMain_Click(object sender, EventArgs e)
+        //private void bgroundBackMain_Click(object sender, EventArgs e)
+        //{
+        //}
+
+        private void linklblLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmLogin mainForm = new frmLogin();
             mainForm.Show();
             this.Hide();
+        }
+
+        private void btnExitMain_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

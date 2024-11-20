@@ -30,14 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.nudQuantity = new System.Windows.Forms.Panel();
-            this.bgroundBackOrder = new System.Windows.Forms.PictureBox();
             this.dataCart = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bgroundSearchButton = new System.Windows.Forms.PictureBox();
-            this.bgroundExitOrder = new System.Windows.Forms.PictureBox();
             this.lstOrder = new System.Windows.Forms.ListBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.cbxCategory = new System.Windows.Forms.ComboBox();
@@ -53,11 +51,11 @@
             this.lbSize = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
+            this.linklblLogOut = new System.Windows.Forms.LinkLabel();
+            this.btnExitOrder = new System.Windows.Forms.Button();
             this.nudQuantity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bgroundBackOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bgroundExitOrder)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
             this.SuspendLayout();
@@ -66,10 +64,10 @@
             // 
             this.nudQuantity.BackColor = System.Drawing.Color.Tan;
             this.nudQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantity.Controls.Add(this.bgroundBackOrder);
+            this.nudQuantity.Controls.Add(this.btnExitOrder);
+            this.nudQuantity.Controls.Add(this.linklblLogOut);
             this.nudQuantity.Controls.Add(this.dataCart);
             this.nudQuantity.Controls.Add(this.bgroundSearchButton);
-            this.nudQuantity.Controls.Add(this.bgroundExitOrder);
             this.nudQuantity.Controls.Add(this.lstOrder);
             this.nudQuantity.Controls.Add(this.txtSearch);
             this.nudQuantity.Controls.Add(this.cbxCategory);
@@ -81,17 +79,6 @@
             this.nudQuantity.Size = new System.Drawing.Size(891, 526);
             this.nudQuantity.TabIndex = 0;
             this.nudQuantity.Paint += new System.Windows.Forms.PaintEventHandler(this.nudQuantity_Paint);
-            // 
-            // bgroundBackOrder
-            // 
-            this.bgroundBackOrder.Image = ((System.Drawing.Image)(resources.GetObject("bgroundBackOrder.Image")));
-            this.bgroundBackOrder.Location = new System.Drawing.Point(824, -2);
-            this.bgroundBackOrder.Name = "bgroundBackOrder";
-            this.bgroundBackOrder.Size = new System.Drawing.Size(30, 30);
-            this.bgroundBackOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bgroundBackOrder.TabIndex = 18;
-            this.bgroundBackOrder.TabStop = false;
-            this.bgroundBackOrder.Click += new System.EventHandler(this.bgroundBackOrder_Click);
             // 
             // dataCart
             // 
@@ -149,17 +136,6 @@
             this.bgroundSearchButton.TabIndex = 6;
             this.bgroundSearchButton.TabStop = false;
             // 
-            // bgroundExitOrder
-            // 
-            this.bgroundExitOrder.Image = ((System.Drawing.Image)(resources.GetObject("bgroundExitOrder.Image")));
-            this.bgroundExitOrder.Location = new System.Drawing.Point(860, -2);
-            this.bgroundExitOrder.Name = "bgroundExitOrder";
-            this.bgroundExitOrder.Size = new System.Drawing.Size(30, 30);
-            this.bgroundExitOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bgroundExitOrder.TabIndex = 5;
-            this.bgroundExitOrder.TabStop = false;
-            this.bgroundExitOrder.Click += new System.EventHandler(this.bgroundExitOrder_Click);
-            // 
             // lstOrder
             // 
             this.lstOrder.BackColor = System.Drawing.Color.BlanchedAlmond;
@@ -167,7 +143,7 @@
             this.lstOrder.ItemHeight = 16;
             this.lstOrder.Location = new System.Drawing.Point(25, 202);
             this.lstOrder.Name = "lstOrder";
-            this.lstOrder.Size = new System.Drawing.Size(174, 308);
+            this.lstOrder.Size = new System.Drawing.Size(174, 276);
             this.lstOrder.TabIndex = 4;
             this.lstOrder.SelectedIndexChanged += new System.EventHandler(this.lstOrder_SelectedIndexChanged);
             // 
@@ -318,6 +294,31 @@
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
             // 
+            // linklblLogOut
+            // 
+            this.linklblLogOut.AutoSize = true;
+            this.linklblLogOut.Font = new System.Drawing.Font("Century", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblLogOut.Location = new System.Drawing.Point(75, 490);
+            this.linklblLogOut.Name = "linklblLogOut";
+            this.linklblLogOut.Size = new System.Drawing.Size(75, 21);
+            this.linklblLogOut.TabIndex = 9;
+            this.linklblLogOut.TabStop = true;
+            this.linklblLogOut.Text = "LogOut";
+            this.linklblLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLogOut_LinkClicked);
+            // 
+            // btnExitOrder
+            // 
+            this.btnExitOrder.BackColor = System.Drawing.Color.Tan;
+            this.btnExitOrder.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitOrder.Location = new System.Drawing.Point(856, 3);
+            this.btnExitOrder.Name = "btnExitOrder";
+            this.btnExitOrder.Size = new System.Drawing.Size(30, 30);
+            this.btnExitOrder.TabIndex = 18;
+            this.btnExitOrder.Text = "X";
+            this.btnExitOrder.UseVisualStyleBackColor = false;
+            this.btnExitOrder.Click += new System.EventHandler(this.btnExitOrder_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,10 +333,8 @@
             this.Load += new System.EventHandler(this.OrderForm_Load);
             this.nudQuantity.ResumeLayout(false);
             this.nudQuantity.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bgroundBackOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bgroundExitOrder)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).EndInit();
@@ -352,7 +351,6 @@
         private System.Windows.Forms.ListBox lstOrder;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox bgroundSearchButton;
-        private System.Windows.Forms.PictureBox bgroundExitOrder;
         private System.Windows.Forms.Label lbSize;
         private System.Windows.Forms.Label lbQuantity;
         private System.Windows.Forms.Label lbPrice;
@@ -368,6 +366,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.ComboBox cbxSize;
-        private System.Windows.Forms.PictureBox bgroundBackOrder;
+        private System.Windows.Forms.LinkLabel linklblLogOut;
+        private System.Windows.Forms.Button btnExitOrder;
     }
 }
