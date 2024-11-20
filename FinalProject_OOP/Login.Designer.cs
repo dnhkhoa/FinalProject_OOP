@@ -37,6 +37,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lbOrder = new System.Windows.Forms.Label();
+            this.btnExitLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,11 +125,24 @@
             this.lbOrder.Text = "Continue as customer";
             this.lbOrder.Click += new System.EventHandler(this.lbOrder_Click);
             // 
+            // btnExitLogin
+            // 
+            this.btnExitLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnExitLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitLogin.Location = new System.Drawing.Point(0, -1);
+            this.btnExitLogin.Name = "btnExitLogin";
+            this.btnExitLogin.Size = new System.Drawing.Size(30, 30);
+            this.btnExitLogin.TabIndex = 8;
+            this.btnExitLogin.Text = "X";
+            this.btnExitLogin.UseVisualStyleBackColor = false;
+            this.btnExitLogin.Click += new System.EventHandler(this.btnExitLogin_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 548);
+            this.Controls.Add(this.btnExitLogin);
             this.Controls.Add(this.lbOrder);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -158,5 +172,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lbOrder;
+        private System.Windows.Forms.Button btnExitLogin;
     }
 }
