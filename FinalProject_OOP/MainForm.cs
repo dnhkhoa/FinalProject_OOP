@@ -21,5 +21,17 @@ namespace FinalProject_OOP
         {
 
         }
+
+        private void bgroundExitMain_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bgroundBackMain_Click(object sender, EventArgs e)
+        {
+            frmLogin mainForm = new frmLogin();
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }
