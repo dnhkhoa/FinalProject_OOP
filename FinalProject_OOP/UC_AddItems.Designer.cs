@@ -43,10 +43,10 @@
             // lblAddNewItem
             // 
             this.lblAddNewItem.AutoSize = true;
-            this.lblAddNewItem.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddNewItem.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddNewItem.Location = new System.Drawing.Point(216, 65);
             this.lblAddNewItem.Name = "lblAddNewItem";
-            this.lblAddNewItem.Size = new System.Drawing.Size(227, 35);
+            this.lblAddNewItem.Size = new System.Drawing.Size(257, 40);
             this.lblAddNewItem.TabIndex = 0;
             this.lblAddNewItem.Text = "Add New Item";
             // 

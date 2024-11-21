@@ -41,7 +41,7 @@
             // 
             this.lblRemoveItem.AutoSize = true;
             this.lblRemoveItem.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemoveItem.Location = new System.Drawing.Point(37, 38);
+            this.lblRemoveItem.Location = new System.Drawing.Point(27, 30);
             this.lblRemoveItem.Name = "lblRemoveItem";
             this.lblRemoveItem.Size = new System.Drawing.Size(252, 40);
             this.lblRemoveItem.TabIndex = 0;

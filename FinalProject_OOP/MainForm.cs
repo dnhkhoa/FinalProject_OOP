@@ -22,6 +22,7 @@ namespace FinalProject_OOP
         {
             uC_AddItems1.Hide();
             uC_UpdateItems1.Hide();
+            uC_RemoveItems1.Hide();
         }
 
         //private void bgroundExitMain_Click(object sender, EventArgs e)
@@ -48,14 +49,18 @@ namespace FinalProject_OOP
         {
             uC_AddItems1.Visible = true;
             uC_AddItems1.BringToFront();
-            
         }
 
         private void btnUpdateItems_Click(object sender, EventArgs e)
         {
             uC_UpdateItems1.Visible = true;
             uC_UpdateItems1.BringToFront();
-            
+        }
+
+        private void btnRemoveItems_Click(object sender, EventArgs e)
+        {
+            uC_RemoveItems1.Visible = true;
+            uC_RemoveItems1.BringToFront();
         }
     }
 }
