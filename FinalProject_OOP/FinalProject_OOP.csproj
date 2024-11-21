@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UC_AddItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddItems.Designer.cs">
+      <DependentUpon>UC_AddItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Barista.cs" />
     <Compile Include="Coffee.cs" />
     <Compile Include="Customer.cs" />
@@ -91,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UC_AddItems.resx">
+      <DependentUpon>UC_AddItems.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

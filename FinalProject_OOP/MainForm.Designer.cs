@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExitMain = new System.Windows.Forms.Button();
+            this.linklblLogOut = new System.Windows.Forms.LinkLabel();
             this.btnIncome = new System.Windows.Forms.Button();
             this.btnPersonel = new System.Windows.Forms.Button();
             this.btnRemoveItems = new System.Windows.Forms.Button();
@@ -36,8 +38,6 @@
             this.btnAddItems = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.linklblLogOut = new System.Windows.Forms.LinkLabel();
-            this.btnExitMain = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(196, 527);
             this.panel1.TabIndex = 0;
+            // 
+            // btnExitMain
+            // 
+            this.btnExitMain.BackColor = System.Drawing.Color.Tan;
+            this.btnExitMain.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitMain.Location = new System.Drawing.Point(3, 3);
+            this.btnExitMain.Name = "btnExitMain";
+            this.btnExitMain.Size = new System.Drawing.Size(30, 30);
+            this.btnExitMain.TabIndex = 9;
+            this.btnExitMain.Text = "X";
+            this.btnExitMain.UseVisualStyleBackColor = false;
+            this.btnExitMain.Click += new System.EventHandler(this.btnExitMain_Click);
+            // 
+            // linklblLogOut
+            // 
+            this.linklblLogOut.AutoSize = true;
+            this.linklblLogOut.Font = new System.Drawing.Font("Century", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblLogOut.Location = new System.Drawing.Point(65, 482);
+            this.linklblLogOut.Name = "linklblLogOut";
+            this.linklblLogOut.Size = new System.Drawing.Size(75, 21);
+            this.linklblLogOut.TabIndex = 8;
+            this.linklblLogOut.TabStop = true;
+            this.linklblLogOut.Text = "LogOut";
+            this.linklblLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLogOut_LinkClicked);
             // 
             // btnIncome
             // 
@@ -136,31 +161,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(690, 527);
             this.panel2.TabIndex = 1;
-            // 
-            // linklblLogOut
-            // 
-            this.linklblLogOut.AutoSize = true;
-            this.linklblLogOut.Font = new System.Drawing.Font("Century", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linklblLogOut.Location = new System.Drawing.Point(65, 482);
-            this.linklblLogOut.Name = "linklblLogOut";
-            this.linklblLogOut.Size = new System.Drawing.Size(75, 21);
-            this.linklblLogOut.TabIndex = 8;
-            this.linklblLogOut.TabStop = true;
-            this.linklblLogOut.Text = "LogOut";
-            this.linklblLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLogOut_LinkClicked);
-            // 
-            // btnExitMain
-            // 
-            this.btnExitMain.BackColor = System.Drawing.Color.Tan;
-            this.btnExitMain.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitMain.Location = new System.Drawing.Point(3, 3);
-            this.btnExitMain.Name = "btnExitMain";
-            this.btnExitMain.Size = new System.Drawing.Size(30, 30);
-            this.btnExitMain.TabIndex = 9;
-            this.btnExitMain.Text = "X";
-            this.btnExitMain.UseVisualStyleBackColor = false;
-            this.btnExitMain.Click += new System.EventHandler(this.btnExitMain_Click);
             // 
             // MainForm
             // 
