@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace FinalProject_OOP
 {
     public partial class MainForm : Form
-    {
+    {   
+        
         public MainForm()
         {
             InitializeComponent();
@@ -19,7 +20,8 @@ namespace FinalProject_OOP
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            uC_AddItems1.Hide();
+            uC_UpdateItems1.Hide();
         }
 
         //private void bgroundExitMain_Click(object sender, EventArgs e)
@@ -40,6 +42,20 @@ namespace FinalProject_OOP
         private void btnExitMain_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnAddItems_Click(object sender, EventArgs e)
+        {
+            uC_AddItems1.Visible = true;
+            uC_AddItems1.BringToFront();
+            
+        }
+
+        private void btnUpdateItems_Click(object sender, EventArgs e)
+        {
+            uC_UpdateItems1.Visible = true;
+            uC_UpdateItems1.BringToFront();
+            
         }
     }
 }

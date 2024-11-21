@@ -17,6 +17,7 @@ namespace FinalProject_OOP
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
+            
         }
     }
 }

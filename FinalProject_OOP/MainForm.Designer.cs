@@ -38,7 +38,10 @@
             this.btnAddItems = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_UpdateItems1 = new FinalProject_OOP.UC_UpdateItems();
+            this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,6 +132,7 @@
             this.btnUpdateItems.TabIndex = 2;
             this.btnUpdateItems.Text = "Update Items";
             this.btnUpdateItems.UseVisualStyleBackColor = false;
+            this.btnUpdateItems.Click += new System.EventHandler(this.btnUpdateItems_Click);
             // 
             // btnAddItems
             // 
@@ -141,6 +145,7 @@
             this.btnAddItems.TabIndex = 1;
             this.btnAddItems.Text = "Add Items";
             this.btnAddItems.UseVisualStyleBackColor = false;
+            this.btnAddItems.Click += new System.EventHandler(this.btnAddItems_Click);
             // 
             // btnPlaceOrder
             // 
@@ -157,10 +162,27 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BurlyWood;
+            this.panel2.Controls.Add(this.uC_UpdateItems1);
+            this.panel2.Controls.Add(this.uC_AddItems1);
             this.panel2.Location = new System.Drawing.Point(214, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(690, 527);
             this.panel2.TabIndex = 1;
+            // 
+            // uC_UpdateItems1
+            // 
+            this.uC_UpdateItems1.Location = new System.Drawing.Point(0, 0);
+            this.uC_UpdateItems1.Name = "uC_UpdateItems1";
+            this.uC_UpdateItems1.Size = new System.Drawing.Size(690, 527);
+            this.uC_UpdateItems1.TabIndex = 1;
+            // 
+            // uC_AddItems1
+            // 
+            this.uC_AddItems1.BackColor = System.Drawing.Color.BurlyWood;
+            this.uC_AddItems1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AddItems1.Name = "uC_AddItems1";
+            this.uC_AddItems1.Size = new System.Drawing.Size(690, 527);
+            this.uC_AddItems1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -177,6 +199,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -193,6 +216,8 @@
         private System.Windows.Forms.Button btnPlaceOrder;
         private System.Windows.Forms.LinkLabel linklblLogOut;
         private System.Windows.Forms.Button btnExitMain;
+        private UC_AddItems uC_AddItems1;
+        private UC_UpdateItems uC_UpdateItems1;
     }
 }
 
