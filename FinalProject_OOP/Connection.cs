@@ -8,5 +8,6 @@ namespace FinalProject_OOP
 {
     internal class Connection
     {
+        
     }
 }

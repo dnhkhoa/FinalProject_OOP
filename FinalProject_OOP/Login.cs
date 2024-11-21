@@ -13,6 +13,7 @@ namespace FinalProject_OOP
 {
     public partial class frmLogin : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True");
         
         private void frmLogin_Load(object sender, EventArgs e)
         {

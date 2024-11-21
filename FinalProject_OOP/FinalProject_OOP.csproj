@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.cs" />
     <Compile Include="UC_AddItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
