@@ -72,7 +72,8 @@ namespace FinalProject_OOP
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-
+            uC_PlaceOrder1.Visible = true;
+            uC_PlaceOrder1.BringToFront();
         }
 
         private void btnPersonel_Click(object sender, EventArgs e)

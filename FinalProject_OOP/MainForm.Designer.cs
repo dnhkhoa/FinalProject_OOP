@@ -42,6 +42,7 @@
             this.uC_RemoveItems1 = new FinalProject_OOP.UC_RemoveItems();
             this.uC_UpdateItems1 = new FinalProject_OOP.UC_UpdateItems();
             this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems();
+            this.uC_PlaceOrder1 = new FinalProject_OOP.UC_PlaceOrder();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -168,6 +169,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BurlyWood;
+            this.panel2.Controls.Add(this.uC_PlaceOrder1);
             this.panel2.Controls.Add(this.uC_Income1);
             this.panel2.Controls.Add(this.uC_RemoveItems1);
             this.panel2.Controls.Add(this.uC_UpdateItems1);
@@ -209,6 +211,14 @@
             this.uC_AddItems1.Size = new System.Drawing.Size(690, 527);
             this.uC_AddItems1.TabIndex = 0;
             // 
+            // uC_PlaceOrder1
+            // 
+            this.uC_PlaceOrder1.BackColor = System.Drawing.Color.BurlyWood;
+            this.uC_PlaceOrder1.Location = new System.Drawing.Point(0, 0);
+            this.uC_PlaceOrder1.Name = "uC_PlaceOrder1";
+            this.uC_PlaceOrder1.Size = new System.Drawing.Size(690, 527);
+            this.uC_PlaceOrder1.TabIndex = 4;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -245,6 +255,7 @@
         private UC_UpdateItems uC_UpdateItems1;
         private UC_RemoveItems uC_RemoveItems1;
         private UC_Income uC_Income1;
+        private UC_PlaceOrder uC_PlaceOrder1;
     }
 }
 

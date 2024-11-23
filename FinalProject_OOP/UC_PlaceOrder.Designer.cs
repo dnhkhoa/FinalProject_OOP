@@ -120,9 +120,9 @@
             this.lblTable.ForeColor = System.Drawing.Color.SaddleBrown;
             this.lblTable.Location = new System.Drawing.Point(3, 182);
             this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(144, 23);
+            this.lblTable.Size = new System.Drawing.Size(66, 23);
             this.lblTable.TabIndex = 19;
-            this.lblTable.Text = "Choose Table";
+            this.lblTable.Text = "Table";
             // 
             // cbxSize
             // 
