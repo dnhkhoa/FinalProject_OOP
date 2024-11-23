@@ -48,7 +48,7 @@
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
@@ -222,7 +222,7 @@
             this.ItemName,
             this.UnitPrice,
             this.Quantity,
-            this.Size,
+            this.ItemSize,
             this.Price});
             this.dataGridView1.Location = new System.Drawing.Point(351, 285);
             this.dataGridView1.Name = "dataGridView1";
@@ -259,12 +259,12 @@
             this.Quantity.Name = "Quantity";
             this.Quantity.Width = 125;
             // 
-            // Size
+            // ItemSize
             // 
-            this.Size.HeaderText = "Size";
-            this.Size.MinimumWidth = 6;
-            this.Size.Name = "Size";
-            this.Size.Width = 125;
+            this.ItemSize.HeaderText = "Size";
+            this.ItemSize.MinimumWidth = 6;
+            this.ItemSize.Name = "ItemSize";
+            this.ItemSize.Width = 125;
             // 
             // Price
             // 
@@ -316,7 +316,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }
