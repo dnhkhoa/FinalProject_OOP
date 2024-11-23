@@ -69,5 +69,15 @@ namespace FinalProject_OOP
             uC_Income1.Visible = true;
             uC_Income1.BringToFront();
         }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPersonel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
