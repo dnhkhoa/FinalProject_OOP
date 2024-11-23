@@ -23,6 +23,7 @@ namespace FinalProject_OOP
             uC_AddItems1.Hide();
             uC_UpdateItems1.Hide();
             uC_RemoveItems1.Hide();
+            uC_Income1.Hide();
         }
 
         //private void bgroundExitMain_Click(object sender, EventArgs e)
@@ -65,7 +66,8 @@ namespace FinalProject_OOP
 
         private void btnIncome_Click(object sender, EventArgs e)
         {
-
+            uC_Income1.Visible = true;
+            uC_Income1.BringToFront();
         }
     }
 }
