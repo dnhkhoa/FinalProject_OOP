@@ -32,17 +32,16 @@
             this.btnExitMain = new System.Windows.Forms.Button();
             this.linklblLogOut = new System.Windows.Forms.LinkLabel();
             this.btnIncome = new System.Windows.Forms.Button();
-            this.btnPersonel = new System.Windows.Forms.Button();
             this.btnRemoveItems = new System.Windows.Forms.Button();
             this.btnUpdateItems = new System.Windows.Forms.Button();
             this.btnAddItems = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_PlaceOrder1 = new FinalProject_OOP.UC_PlaceOrder();
             this.uC_Income1 = new FinalProject_OOP.UC_Income();
             this.uC_RemoveItems1 = new FinalProject_OOP.UC_RemoveItems();
             this.uC_UpdateItems1 = new FinalProject_OOP.UC_UpdateItems();
             this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems();
-            this.uC_PlaceOrder1 = new FinalProject_OOP.UC_PlaceOrder();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +52,6 @@
             this.panel1.Controls.Add(this.btnExitMain);
             this.panel1.Controls.Add(this.linklblLogOut);
             this.panel1.Controls.Add(this.btnIncome);
-            this.panel1.Controls.Add(this.btnPersonel);
             this.panel1.Controls.Add(this.btnRemoveItems);
             this.panel1.Controls.Add(this.btnUpdateItems);
             this.panel1.Controls.Add(this.btnAddItems);
@@ -93,26 +91,13 @@
             this.btnIncome.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnIncome.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncome.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnIncome.Location = new System.Drawing.Point(14, 400);
+            this.btnIncome.Location = new System.Drawing.Point(14, 328);
             this.btnIncome.Name = "btnIncome";
             this.btnIncome.Size = new System.Drawing.Size(202, 54);
             this.btnIncome.TabIndex = 5;
             this.btnIncome.Text = "Income";
             this.btnIncome.UseVisualStyleBackColor = false;
             this.btnIncome.Click += new System.EventHandler(this.btnIncome_Click);
-            // 
-            // btnPersonel
-            // 
-            this.btnPersonel.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnPersonel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonel.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnPersonel.Location = new System.Drawing.Point(14, 327);
-            this.btnPersonel.Name = "btnPersonel";
-            this.btnPersonel.Size = new System.Drawing.Size(202, 54);
-            this.btnPersonel.TabIndex = 4;
-            this.btnPersonel.Text = "Personel";
-            this.btnPersonel.UseVisualStyleBackColor = false;
-            this.btnPersonel.Click += new System.EventHandler(this.btnPersonel_Click);
             // 
             // btnRemoveItems
             // 
@@ -179,6 +164,14 @@
             this.panel2.Size = new System.Drawing.Size(690, 527);
             this.panel2.TabIndex = 1;
             // 
+            // uC_PlaceOrder1
+            // 
+            this.uC_PlaceOrder1.BackColor = System.Drawing.Color.BurlyWood;
+            this.uC_PlaceOrder1.Location = new System.Drawing.Point(0, 0);
+            this.uC_PlaceOrder1.Name = "uC_PlaceOrder1";
+            this.uC_PlaceOrder1.Size = new System.Drawing.Size(690, 527);
+            this.uC_PlaceOrder1.TabIndex = 4;
+            // 
             // uC_Income1
             // 
             this.uC_Income1.BackColor = System.Drawing.Color.BurlyWood;
@@ -211,14 +204,6 @@
             this.uC_AddItems1.Size = new System.Drawing.Size(690, 527);
             this.uC_AddItems1.TabIndex = 0;
             // 
-            // uC_PlaceOrder1
-            // 
-            this.uC_PlaceOrder1.BackColor = System.Drawing.Color.BurlyWood;
-            this.uC_PlaceOrder1.Location = new System.Drawing.Point(0, 0);
-            this.uC_PlaceOrder1.Name = "uC_PlaceOrder1";
-            this.uC_PlaceOrder1.Size = new System.Drawing.Size(690, 527);
-            this.uC_PlaceOrder1.TabIndex = 4;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -244,7 +229,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnIncome;
-        private System.Windows.Forms.Button btnPersonel;
         private System.Windows.Forms.Button btnRemoveItems;
         private System.Windows.Forms.Button btnUpdateItems;
         private System.Windows.Forms.Button btnAddItems;
