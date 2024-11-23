@@ -37,11 +37,11 @@
             this.cbxSize = new System.Windows.Forms.ComboBox();
             this.nudQantity = new System.Windows.Forms.NumericUpDown();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.lbQuantity = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.lbItem = new System.Windows.Forms.Label();
-            this.lbSize = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
+            this.lblSize = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Table = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,11 +81,11 @@
             this.panel2.Controls.Add(this.cbxSize);
             this.panel2.Controls.Add(this.nudQantity);
             this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.lbQuantity);
+            this.panel2.Controls.Add(this.lblQuantity);
             this.panel2.Controls.Add(this.txtItemName);
             this.panel2.Controls.Add(this.lbItem);
-            this.panel2.Controls.Add(this.lbSize);
-            this.panel2.Controls.Add(this.lbPrice);
+            this.panel2.Controls.Add(this.lblSize);
+            this.panel2.Controls.Add(this.lblPrice);
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Location = new System.Drawing.Point(351, 14);
             this.panel2.Name = "panel2";
@@ -153,16 +153,16 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // lbQuantity
+            // lblQuantity
             // 
-            this.lbQuantity.AutoSize = true;
-            this.lbQuantity.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuantity.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lbQuantity.Location = new System.Drawing.Point(3, 51);
-            this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(102, 23);
-            this.lbQuantity.TabIndex = 9;
-            this.lbQuantity.Text = "Quantity";
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblQuantity.Location = new System.Drawing.Point(3, 51);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(102, 23);
+            this.lblQuantity.TabIndex = 9;
+            this.lblQuantity.Text = "Quantity";
             // 
             // txtItemName
             // 
@@ -184,27 +184,27 @@
             this.lbItem.TabIndex = 7;
             this.lbItem.Text = "Item Name";
             // 
-            // lbSize
+            // lblSize
             // 
-            this.lbSize.AutoSize = true;
-            this.lbSize.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSize.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lbSize.Location = new System.Drawing.Point(3, 95);
-            this.lbSize.Name = "lbSize";
-            this.lbSize.Size = new System.Drawing.Size(53, 23);
-            this.lbSize.TabIndex = 10;
-            this.lbSize.Text = "Size";
+            this.lblSize.AutoSize = true;
+            this.lblSize.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSize.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblSize.Location = new System.Drawing.Point(3, 95);
+            this.lblSize.Name = "lblSize";
+            this.lblSize.Size = new System.Drawing.Size(53, 23);
+            this.lblSize.TabIndex = 10;
+            this.lblSize.Text = "Size";
             // 
-            // lbPrice
+            // lblPrice
             // 
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lbPrice.Location = new System.Drawing.Point(3, 137);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(62, 23);
-            this.lbPrice.TabIndex = 8;
-            this.lbPrice.Text = "Price";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblPrice.Location = new System.Drawing.Point(3, 137);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(62, 23);
+            this.lblPrice.TabIndex = 8;
+            this.lblPrice.Text = "Price";
             // 
             // txtPrice
             // 
@@ -302,11 +302,11 @@
         private System.Windows.Forms.ComboBox cbxSize;
         private System.Windows.Forms.NumericUpDown nudQantity;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label lbQuantity;
+        private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Label lbItem;
-        private System.Windows.Forms.Label lbSize;
-        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Label lblSize;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.ComboBox cbbTable;
