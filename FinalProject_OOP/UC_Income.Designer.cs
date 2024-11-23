@@ -42,7 +42,7 @@
             this.lblIncome.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncome.Location = new System.Drawing.Point(27, 30);
             this.lblIncome.Name = "lblIncome";
-            this.lblIncome.Size = new System.Drawing.Size(137, 40);
+            this.lblIncome.Size = new System.Drawing.Size(134, 39);
             this.lblIncome.TabIndex = 0;
             this.lblIncome.Text = "Income";
             // 

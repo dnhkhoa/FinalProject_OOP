@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblRemoveItem = new System.Windows.Forms.Label();
             this.lblItemName = new System.Windows.Forms.Label();
             this.txtItemName = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +41,7 @@
             this.lblRemoveItem.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRemoveItem.Location = new System.Drawing.Point(27, 30);
             this.lblRemoveItem.Name = "lblRemoveItem";
-            this.lblRemoveItem.Size = new System.Drawing.Size(252, 40);
+            this.lblRemoveItem.Size = new System.Drawing.Size(247, 39);
             this.lblRemoveItem.TabIndex = 0;
             this.lblRemoveItem.Text = "Remove Items";
             // 
@@ -64,12 +62,6 @@
             this.txtItemName.Size = new System.Drawing.Size(177, 22);
             this.txtItemName.TabIndex = 2;
             this.txtItemName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // dataGridView1
             // 
@@ -104,7 +96,6 @@
         private System.Windows.Forms.Label lblRemoveItem;
         private System.Windows.Forms.Label lblItemName;
         private System.Windows.Forms.TextBox txtItemName;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
