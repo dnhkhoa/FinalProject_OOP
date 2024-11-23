@@ -16,5 +16,10 @@ namespace FinalProject_OOP
         {
             InitializeComponent();
         }
+
+        private void btnOutput_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

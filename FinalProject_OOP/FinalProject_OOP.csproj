@@ -80,6 +80,12 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Income.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Income.Designer.cs">
+      <DependentUpon>UC_Income.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_RemoveItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="UC_AddItems.resx">
       <DependentUpon>UC_AddItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Income.resx">
+      <DependentUpon>UC_Income.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_RemoveItems.resx">
       <DependentUpon>UC_RemoveItems.cs</DependentUpon>
