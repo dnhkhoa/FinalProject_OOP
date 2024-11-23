@@ -31,6 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPlaceOrder = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.cbbTable = new System.Windows.Forms.ComboBox();
+            this.lblTable = new System.Windows.Forms.Label();
             this.cbxSize = new System.Windows.Forms.ComboBox();
             this.nudQantity = new System.Windows.Forms.NumericUpDown();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -40,9 +43,6 @@
             this.lbSize = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.cbbTable = new System.Windows.Forms.ComboBox();
-            this.lblTable = new System.Windows.Forms.Label();
-            this.btnPay = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Table = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +68,7 @@
             this.lblPlaceOrder.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlaceOrder.Location = new System.Drawing.Point(27, 30);
             this.lblPlaceOrder.Name = "lblPlaceOrder";
-            this.lblPlaceOrder.Size = new System.Drawing.Size(215, 40);
+            this.lblPlaceOrder.Size = new System.Drawing.Size(211, 39);
             this.lblPlaceOrder.TabIndex = 1;
             this.lblPlaceOrder.Text = "Place Order";
             // 
@@ -91,7 +91,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 265);
             this.panel2.TabIndex = 17;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.Chocolate;
+            this.btnPay.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPay.Location = new System.Drawing.Point(189, 222);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(91, 37);
+            this.btnPay.TabIndex = 21;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = false;
+            // 
+            // cbbTable
+            // 
+            this.cbbTable.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.cbbTable.FormattingEnabled = true;
+            this.cbbTable.Location = new System.Drawing.Point(146, 181);
+            this.cbbTable.Name = "cbbTable";
+            this.cbbTable.Size = new System.Drawing.Size(157, 24);
+            this.cbbTable.TabIndex = 20;
+            // 
+            // lblTable
+            // 
+            this.lblTable.AutoSize = true;
+            this.lblTable.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTable.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblTable.Location = new System.Drawing.Point(3, 182);
+            this.lblTable.Name = "lblTable";
+            this.lblTable.Size = new System.Drawing.Size(144, 23);
+            this.lblTable.TabIndex = 19;
+            this.lblTable.Text = "Choose Table";
             // 
             // cbxSize
             // 
@@ -182,38 +213,6 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
-            // 
-            // cbbTable
-            // 
-            this.cbbTable.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.cbbTable.FormattingEnabled = true;
-            this.cbbTable.Location = new System.Drawing.Point(146, 181);
-            this.cbbTable.Name = "cbbTable";
-            this.cbbTable.Size = new System.Drawing.Size(157, 24);
-            this.cbbTable.TabIndex = 20;
-            // 
-            // lblTable
-            // 
-            this.lblTable.AutoSize = true;
-            this.lblTable.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTable.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblTable.Location = new System.Drawing.Point(3, 182);
-            this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(144, 23);
-            this.lblTable.TabIndex = 19;
-            this.lblTable.Text = "Choose Table";
-            // 
-            // btnPay
-            // 
-            this.btnPay.BackColor = System.Drawing.Color.Chocolate;
-            this.btnPay.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPay.Location = new System.Drawing.Point(189, 222);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(91, 37);
-            this.btnPay.TabIndex = 21;
-            this.btnPay.Text = "Pay";
-            this.btnPay.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 

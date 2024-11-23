@@ -17,10 +17,10 @@ namespace FinalProject_OOP
             InitializeComponent();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+        //private void panel2_Paint(object sender, PaintEventArgs e)
+        //{
 
-        }
+        //}
 
         private void UC_PlaceOrder_Load(object sender, EventArgs e)
         {
