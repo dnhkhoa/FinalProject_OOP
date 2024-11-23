@@ -93,6 +93,7 @@
             this.Controls.Add(this.lblIncome);
             this.Name = "UC_Income";
             this.Size = new System.Drawing.Size(690, 527);
+            this.Load += new System.EventHandler(this.UC_Income_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

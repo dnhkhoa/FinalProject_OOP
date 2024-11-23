@@ -38,9 +38,9 @@
             this.btnAddItems = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_RemoveItems1 = new FinalProject_OOP.UC_RemoveItems();
             this.uC_UpdateItems1 = new FinalProject_OOP.UC_UpdateItems();
             this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems();
-            this.uC_RemoveItems1 = new FinalProject_OOP.UC_RemoveItems();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,7 @@
             this.btnIncome.TabIndex = 5;
             this.btnIncome.Text = "Income";
             this.btnIncome.UseVisualStyleBackColor = false;
+            this.btnIncome.Click += new System.EventHandler(this.btnIncome_Click);
             // 
             // btnPersonel
             // 
@@ -172,8 +173,17 @@
             this.panel2.Size = new System.Drawing.Size(690, 527);
             this.panel2.TabIndex = 1;
             // 
+            // uC_RemoveItems1
+            // 
+            this.uC_RemoveItems1.BackColor = System.Drawing.Color.BurlyWood;
+            this.uC_RemoveItems1.Location = new System.Drawing.Point(0, 0);
+            this.uC_RemoveItems1.Name = "uC_RemoveItems1";
+            this.uC_RemoveItems1.Size = new System.Drawing.Size(690, 527);
+            this.uC_RemoveItems1.TabIndex = 2;
+            // 
             // uC_UpdateItems1
             // 
+            this.uC_UpdateItems1.BackColor = System.Drawing.Color.BurlyWood;
             this.uC_UpdateItems1.Location = new System.Drawing.Point(0, 0);
             this.uC_UpdateItems1.Name = "uC_UpdateItems1";
             this.uC_UpdateItems1.Size = new System.Drawing.Size(690, 527);
@@ -186,14 +196,6 @@
             this.uC_AddItems1.Name = "uC_AddItems1";
             this.uC_AddItems1.Size = new System.Drawing.Size(690, 527);
             this.uC_AddItems1.TabIndex = 0;
-            // 
-            // uC_RemoveItems1
-            // 
-            this.uC_RemoveItems1.BackColor = System.Drawing.Color.BurlyWood;
-            this.uC_RemoveItems1.Location = new System.Drawing.Point(0, 0);
-            this.uC_RemoveItems1.Name = "uC_RemoveItems1";
-            this.uC_RemoveItems1.Size = new System.Drawing.Size(690, 527);
-            this.uC_RemoveItems1.TabIndex = 2;
             // 
             // MainForm
             // 

@@ -21,5 +21,10 @@ namespace FinalProject_OOP
         {
 
         }
+
+        private void UC_Income_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -62,5 +62,10 @@ namespace FinalProject_OOP
             uC_RemoveItems1.Visible = true;
             uC_RemoveItems1.BringToFront();
         }
+
+        private void btnIncome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
