@@ -19,7 +19,7 @@ namespace FinalProject_OOP
         {
 
         }
-        // Simple dictionary storing username and password
+        //Simple dictionary storing username and password
         private Dictionary<string, string> userData = new Dictionary<string, string>
         {
             { "admin", "123"},
@@ -40,14 +40,29 @@ namespace FinalProject_OOP
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-            // check username password
-            if (userData.ContainsKey(username) && userData[username] == password)
+            if (txtUsername.Text == "" || txtPassword.Text == "")
             {
-                MessageBox.Show("Login successful!", "Success",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Plase fill all Username and Password", "Error input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            DataDataContext db = new DataDataContext(con);
+
+            string tUsername = txtUsername.Text;
+            string tPassword = txtPassword.Text;
+
+            var user = db.Accounts.FirstOrDefault(u => u.UserName == tUsername && u.PassWord == tPassword);
+
+            if (user != null )
+            {
+                MessageBox.Show("Login Successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+                this.Hide();
+            }
+            else if (user != null )
+            {
+                MessageBox.Show("Login Successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
@@ -55,13 +70,32 @@ namespace FinalProject_OOP
             }
             else
             {
-                MessageBox.Show("Invalid username or password. Please try again.",
-               "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Incorrect Username/Password", "Error Message"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                // Clear the password field for security reasons
-                txtPassword.Clear();
-                txtPassword.Focus();
             }
+            //string username = txtUsername.Text;
+            //string password = txtPassword.Text;
+
+            //// check username password
+            //if (userData.ContainsKey(username) && userData[username] == password)
+            //{
+            //    MessageBox.Show("Login successful!", "Success",
+            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //    MainForm mainForm = new MainForm();
+            //    mainForm.Show();
+            //    this.Hide();
+            //} e
+            //else
+            //{
+            //    MessageBox.Show("Invalid username or password. Please try again.",
+            //   "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            //    // Clear the password field for security reasons
+            //    txtPassword.Clear();
+            //    txtPassword.Focus();
+            //}
         }
 
         private void lbOrder_Click(object sender, EventArgs e)
@@ -75,5 +109,7 @@ namespace FinalProject_OOP
         {
             Application.Exit();
         }
+
+
     }
 }
