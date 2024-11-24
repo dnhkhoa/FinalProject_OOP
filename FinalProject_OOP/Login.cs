@@ -13,7 +13,7 @@ namespace FinalProject_OOP
 {
     public partial class frmLogin : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS-PC\Documents\Cafe.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\DELL\\Documents\\CoffeeManagement.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True");
         
         private void frmLogin_Load(object sender, EventArgs e)
         {
