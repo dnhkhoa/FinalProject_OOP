@@ -13,7 +13,7 @@ namespace FinalProject_OOP
 {
     public partial class frmLogin : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=KHANG;Initial Catalog=QuanLyQuanCafe;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=KHANG;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;Encrypt=True");
         
         private void frmLogin_Load(object sender, EventArgs e)
         {
