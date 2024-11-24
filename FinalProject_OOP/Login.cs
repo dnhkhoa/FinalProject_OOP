@@ -72,5 +72,10 @@ namespace FinalProject_OOP
         {
             Application.Exit();
         }
+
+        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = checkBoxShowPass.Checked ? '\0' : '*';
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lbOrder = new System.Windows.Forms.Label();
             this.btnExitLogin = new System.Windows.Forms.Button();
+            this.checkBoxShowPass = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +97,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(147, 236);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(185, 22);
             this.txtPassword.TabIndex = 5;
             // 
@@ -137,11 +139,25 @@
             this.btnExitLogin.UseVisualStyleBackColor = false;
             this.btnExitLogin.Click += new System.EventHandler(this.btnExitLogin_Click);
             // 
+            // checkBoxShowPass
+            // 
+            this.checkBoxShowPass.AutoSize = true;
+            this.checkBoxShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxShowPass.Location = new System.Drawing.Point(203, 264);
+            this.checkBoxShowPass.Name = "checkBoxShowPass";
+            this.checkBoxShowPass.Size = new System.Drawing.Size(129, 20);
+            this.checkBoxShowPass.TabIndex = 9;
+            this.checkBoxShowPass.Text = "Show PassWord";
+            this.checkBoxShowPass.UseVisualStyleBackColor = false;
+            this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 548);
+            this.Controls.Add(this.checkBoxShowPass);
             this.Controls.Add(this.btnExitLogin);
             this.Controls.Add(this.lbOrder);
             this.Controls.Add(this.btnLogin);
@@ -173,5 +189,6 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lbOrder;
         private System.Windows.Forms.Button btnExitLogin;
+        private System.Windows.Forms.CheckBox checkBoxShowPass;
     }
 }
