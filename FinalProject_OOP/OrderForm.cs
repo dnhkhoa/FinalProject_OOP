@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace FinalProject_OOP
 {
     public partial class OrderForm : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=KHANG;Initial Catalog=QuanLyQuanCafe;Integrated Security=True");
         private void UpdatePrice()
         {
             // Lấy kích thước đã chọn
@@ -44,24 +46,7 @@ namespace FinalProject_OOP
 
         private void cbxCategory_SelectedInxdexChanged(object sender, EventArgs e)
         {
-            lstOrder.Items.Clear();
-
-            string category = cbxCategory.Text;
-
-            if (category == "Drinks")
-            {
-                if (MenuShop.Coffees != null && MenuShop.Coffees.Count > 0)
-                {
-                    foreach (var coffee in MenuShop.Coffees)
-                    {
-                        lstOrder.Items.Add(coffee.CoffeeName);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No coffee items found.");
-                }
-            }
+           string category= cbxCategory.Text;
 
         }
 
