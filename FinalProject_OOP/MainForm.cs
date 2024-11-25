@@ -17,11 +17,10 @@ namespace FinalProject_OOP
         public MainForm()
         {
             InitializeComponent();
-            LoadTable;
+        
         }
-        void LoadTable
-            (
-            );
+        
+      
         private void MainForm_Load(object sender, EventArgs e)
         {
             uC_AddItems1.Hide();
