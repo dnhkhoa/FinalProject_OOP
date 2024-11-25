@@ -9,15 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinalProject_OOP
-{
+{   
+    
     public partial class MainForm : Form
     {   
         
         public MainForm()
         {
             InitializeComponent();
+            LoadTable;
         }
-
+        void LoadTable
+            (
+            );
         private void MainForm_Load(object sender, EventArgs e)
         {
             uC_AddItems1.Hide();
@@ -76,6 +80,9 @@ namespace FinalProject_OOP
             uC_PlaceOrder1.BringToFront();
         }
 
-       
+        private void uC_PlaceOrder1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

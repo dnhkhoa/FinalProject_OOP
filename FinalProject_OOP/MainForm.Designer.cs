@@ -171,6 +171,7 @@
             this.uC_PlaceOrder1.Name = "uC_PlaceOrder1";
             this.uC_PlaceOrder1.Size = new System.Drawing.Size(690, 527);
             this.uC_PlaceOrder1.TabIndex = 4;
+            this.uC_PlaceOrder1.Load += new System.EventHandler(this.uC_PlaceOrder1_Load);
             // 
             // uC_Income1
             // 
