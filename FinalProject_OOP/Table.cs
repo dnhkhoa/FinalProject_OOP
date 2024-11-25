@@ -50,6 +50,7 @@ namespace FinalProject_OOP
         public List<Table> LoadTableList()
         {
             List<Table> list = new List<Table>();
+            DataTable data = DataProvider.Ins
             
             return list;
         }
