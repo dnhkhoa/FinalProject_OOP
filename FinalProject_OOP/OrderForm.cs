@@ -14,21 +14,48 @@ namespace FinalProject_OOP
 {
     public partial class OrderForm : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=KHANG;Initial Catalog=QuanLyQuanCafe;Integrated Security=True");
+        public class ComboBoxItem
+        {
+            public string Text { get; set; }
+            public object Value { get; set; }
+
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
+        private void LoadFoodItems(int categoryId)
+        {
+            lstOrder.Items.Clear();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT name, price FROM FoodCatagory WHERE idDrink = @CategoryId";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@CategoryId", categoryId);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string item = $"{reader["name"]} - ${reader["price"]}";
+                        lstOrder.Items.Add(item);
+                        MessageBox.Show(item); // Hiển thị từng item được thêm
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading food items: " + ex.Message);
+                }
+            }
+        }
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30";
+
         private void UpdatePrice()
         {
-            // Lấy kích thước đã chọn
-            string size = cbxSize.SelectedItem.ToString();
-
-            // tìm thức uống đã chọn từ danh sách
-            //var selectedcoffee = menu.find(coffee => coffee.coffeename == txtitemname.text);
-
-            //// nếu tìm thấy thức uống, tính giá theo kích thước
-            //if (selectedcoffee != null)
-            //{
-            //    double price = selectedcoffee.pricebysize(size);
-            //    txtprice.text = price.tostring("c"); // hiển thị dưới dạng tiền tệ
-            //}
+          
         }
         public OrderForm()
         {
@@ -37,16 +64,43 @@ namespace FinalProject_OOP
 
         private void OrderForm_Load(object sender, EventArgs e)
         {
-            cbxCategory.Items.Add("Drinks");
-            cbxCategory.Items.Add("Cake");
             cbxSize.Items.Add("Small");
             cbxSize.Items.Add("Medium");
             cbxSize.Items.Add("Large");
+            LoadCatagory();
         }
+        private void LoadCatagory()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT id, name FROM Catagory";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
+                    while (reader.Read())
+                    {
+                        cbxCategory.Items.Add(new ComboBoxItem
+                        {
+                            Text = reader["name"].ToString(),
+                            Value = reader["id"]
+                        });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading categories: " + ex.Message);
+                }
+            }
+        }
         private void cbxCategory_SelectedInxdexChanged(object sender, EventArgs e)
         {
-           string category= cbxCategory.Text;
+            if (cbxCategory.SelectedItem is ComboBoxItem selectedCategory)
+            {
+                LoadFoodItems(Convert.ToInt32(selectedCategory.Value));
+            }
 
         }
 

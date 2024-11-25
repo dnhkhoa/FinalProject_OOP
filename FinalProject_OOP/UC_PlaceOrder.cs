@@ -59,9 +59,7 @@ namespace FinalProject_OOP
                             string status = btn.Tag.ToString();
                             MessageBox.Show($"{tableName} hiện đang {status}");
                         };
-
-                        // Thêm nút vào FlowLayoutPanel
-                        panel1.Controls.Add(btn);
+                        flowLayoutPanel1.Controls.Add(btn);
                     }
                 }
             }

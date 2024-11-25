@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lblPlaceOrder = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
@@ -50,17 +49,11 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(24, 73);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(321, 434);
-            this.panel1.TabIndex = 0;
             // 
             // lblPlaceOrder
             // 
@@ -273,15 +266,22 @@
             this.Price.Name = "Price";
             this.Price.Width = 125;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 72);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(331, 434);
+            this.flowLayoutPanel1.TabIndex = 19;
+            // 
             // UC_PlaceOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblPlaceOrder);
-            this.Controls.Add(this.panel1);
             this.Name = "UC_PlaceOrder";
             this.Size = new System.Drawing.Size(690, 527);
             this.Load += new System.EventHandler(this.UC_PlaceOrder_Load);
@@ -295,8 +295,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblPlaceOrder;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbxSize;
@@ -318,5 +316,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
