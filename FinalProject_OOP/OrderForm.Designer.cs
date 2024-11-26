@@ -33,6 +33,10 @@
             this.btnExitOrder = new System.Windows.Forms.Button();
             this.linklblLogOut = new System.Windows.Forms.LinkLabel();
             this.dataCart = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bgroundSearchButton = new System.Windows.Forms.PictureBox();
             this.lstOrder = new System.Windows.Forms.ListBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -49,10 +53,6 @@
             this.lbSize = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nudQuantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).BeginInit();
@@ -123,6 +123,34 @@
             this.dataCart.TabIndex = 17;
             this.dataCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Item Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 115;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Quantity";
+            this.Column2.MinimumWidth = 4;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 98;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Size";
+            this.Column3.MinimumWidth = 4;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 98;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Price";
+            this.Column4.MinimumWidth = 4;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 98;
+            // 
             // bgroundSearchButton
             // 
             this.bgroundSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("bgroundSearchButton.Image")));
@@ -151,6 +179,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(147, 22);
             this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // cbxCategory
             // 
@@ -160,6 +189,7 @@
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(174, 24);
             this.cbxCategory.TabIndex = 2;
+            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_SelectedIndexChanged);
             // 
             // lbCategory
             // 
@@ -217,6 +247,7 @@
             this.nudQantity.Name = "nudQantity";
             this.nudQantity.Size = new System.Drawing.Size(157, 22);
             this.nudQantity.TabIndex = 14;
+            this.nudQantity.ValueChanged += new System.EventHandler(this.nudQantity_ValueChanged);
             // 
             // btnAddCart
             // 
@@ -229,6 +260,7 @@
             this.btnAddCart.TabIndex = 15;
             this.btnAddCart.Text = "Add to Cart";
             this.btnAddCart.UseVisualStyleBackColor = false;
+            this.btnAddCart.Click += new System.EventHandler(this.btnAddCart_Click);
             // 
             // lbQuantity
             // 
@@ -290,34 +322,6 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Item Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 115;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Quantity";
-            this.Column2.MinimumWidth = 4;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 98;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Size";
-            this.Column3.MinimumWidth = 4;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 98;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Price";
-            this.Column4.MinimumWidth = 4;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 98;
             // 
             // OrderForm
             // 
