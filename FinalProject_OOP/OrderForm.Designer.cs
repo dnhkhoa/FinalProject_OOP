@@ -234,7 +234,7 @@
             // nudQantity
             // 
             this.nudQantity.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.nudQantity.Location = new System.Drawing.Point(168, 118);
+            this.nudQantity.Location = new System.Drawing.Point(168, 109);
             this.nudQantity.Name = "nudQantity";
             this.nudQantity.Size = new System.Drawing.Size(157, 22);
             this.nudQantity.TabIndex = 14;
@@ -245,7 +245,7 @@
             this.btnAddCart.BackColor = System.Drawing.Color.Chocolate;
             this.btnAddCart.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCart.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddCart.Location = new System.Drawing.Point(422, 174);
+            this.btnAddCart.Location = new System.Drawing.Point(422, 161);
             this.btnAddCart.Name = "btnAddCart";
             this.btnAddCart.Size = new System.Drawing.Size(157, 37);
             this.btnAddCart.TabIndex = 15;
@@ -258,7 +258,7 @@
             this.lbQuantity.AutoSize = true;
             this.lbQuantity.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuantity.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lbQuantity.Location = new System.Drawing.Point(14, 107);
+            this.lbQuantity.Location = new System.Drawing.Point(14, 99);
             this.lbQuantity.Name = "lbQuantity";
             this.lbQuantity.Size = new System.Drawing.Size(112, 32);
             this.lbQuantity.TabIndex = 9;
@@ -300,7 +300,7 @@
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lbPrice.Location = new System.Drawing.Point(348, 109);
+            this.lbPrice.Location = new System.Drawing.Point(348, 99);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(68, 32);
             this.lbPrice.TabIndex = 8;
@@ -309,7 +309,7 @@
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.txtPrice.Location = new System.Drawing.Point(422, 117);
+            this.txtPrice.Location = new System.Drawing.Point(422, 108);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
