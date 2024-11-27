@@ -130,7 +130,7 @@
             // 
             this.cbxSize.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.cbxSize.FormattingEnabled = true;
-            this.cbxSize.Location = new System.Drawing.Point(146, 94);
+            this.cbxSize.Location = new System.Drawing.Point(146, 50);
             this.cbxSize.Name = "cbxSize";
             this.cbxSize.Size = new System.Drawing.Size(157, 24);
             this.cbxSize.TabIndex = 18;
@@ -139,7 +139,7 @@
             // nudQantity
             // 
             this.nudQantity.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.nudQantity.Location = new System.Drawing.Point(146, 52);
+            this.nudQantity.Location = new System.Drawing.Point(146, 96);
             this.nudQantity.Name = "nudQantity";
             this.nudQantity.Size = new System.Drawing.Size(157, 22);
             this.nudQantity.TabIndex = 14;
@@ -163,7 +163,7 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblQuantity.Location = new System.Drawing.Point(3, 51);
+            this.lblQuantity.Location = new System.Drawing.Point(3, 95);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(102, 23);
             this.lblQuantity.TabIndex = 9;
@@ -185,7 +185,7 @@
             this.lblSize.AutoSize = true;
             this.lblSize.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSize.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblSize.Location = new System.Drawing.Point(3, 95);
+            this.lblSize.Location = new System.Drawing.Point(3, 51);
             this.lblSize.Name = "lblSize";
             this.lblSize.Size = new System.Drawing.Size(53, 23);
             this.lblSize.TabIndex = 10;

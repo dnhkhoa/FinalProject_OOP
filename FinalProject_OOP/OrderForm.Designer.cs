@@ -33,10 +33,6 @@
             this.btnExitOrder = new System.Windows.Forms.Button();
             this.linklblLogOut = new System.Windows.Forms.LinkLabel();
             this.dataCart = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bgroundSearchButton = new System.Windows.Forms.PictureBox();
             this.lstOrder = new System.Windows.Forms.ListBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -44,6 +40,7 @@
             this.lbCategory = new System.Windows.Forms.Label();
             this.lbPlaceOrder = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbTable = new System.Windows.Forms.ComboBox();
             this.cbxSize = new System.Windows.Forms.ComboBox();
             this.nudQantity = new System.Windows.Forms.NumericUpDown();
             this.btnAddCart = new System.Windows.Forms.Button();
@@ -53,7 +50,14 @@
             this.lbSize = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblTable = new System.Windows.Forms.Label();
+            this.Table = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
             this.nudQuantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).BeginInit();
@@ -65,6 +69,8 @@
             // 
             this.nudQuantity.BackColor = System.Drawing.Color.Tan;
             this.nudQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudQuantity.Controls.Add(this.btnPay);
+            this.nudQuantity.Controls.Add(this.btnRemove);
             this.nudQuantity.Controls.Add(this.btnExitOrder);
             this.nudQuantity.Controls.Add(this.linklblLogOut);
             this.nudQuantity.Controls.Add(this.dataCart);
@@ -111,6 +117,7 @@
             this.dataCart.BackgroundColor = System.Drawing.Color.BlanchedAlmond;
             this.dataCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -123,34 +130,6 @@
             this.dataCart.Size = new System.Drawing.Size(614, 132);
             this.dataCart.TabIndex = 17;
             this.dataCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Item Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 115;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Quantity";
-            this.Column2.MinimumWidth = 4;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 98;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Size";
-            this.Column3.MinimumWidth = 4;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 98;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Price";
-            this.Column4.MinimumWidth = 4;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 98;
             // 
             // bgroundSearchButton
             // 
@@ -217,7 +196,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.lblTable);
+            this.panel1.Controls.Add(this.cbbTable);
             this.panel1.Controls.Add(this.cbxSize);
             this.panel1.Controls.Add(this.nudQantity);
             this.panel1.Controls.Add(this.btnAddCart);
@@ -231,6 +211,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(614, 244);
             this.panel1.TabIndex = 16;
+            // 
+            // cbbTable
+            // 
+            this.cbbTable.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.cbbTable.FormattingEnabled = true;
+            this.cbbTable.Location = new System.Drawing.Point(168, 174);
+            this.cbbTable.Name = "cbbTable";
+            this.cbbTable.Size = new System.Drawing.Size(157, 24);
+            this.cbbTable.TabIndex = 19;
             // 
             // cbxSize
             // 
@@ -254,9 +243,9 @@
             // btnAddCart
             // 
             this.btnAddCart.BackColor = System.Drawing.Color.Chocolate;
-            this.btnAddCart.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCart.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCart.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddCart.Location = new System.Drawing.Point(235, 186);
+            this.btnAddCart.Location = new System.Drawing.Point(422, 174);
             this.btnAddCart.Name = "btnAddCart";
             this.btnAddCart.Size = new System.Drawing.Size(157, 37);
             this.btnAddCart.TabIndex = 15;
@@ -269,7 +258,7 @@
             this.lbQuantity.AutoSize = true;
             this.lbQuantity.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuantity.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lbQuantity.Location = new System.Drawing.Point(25, 109);
+            this.lbQuantity.Location = new System.Drawing.Point(14, 107);
             this.lbQuantity.Name = "lbQuantity";
             this.lbQuantity.Size = new System.Drawing.Size(112, 32);
             this.lbQuantity.TabIndex = 9;
@@ -325,13 +314,72 @@
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
             // 
-            // comboBox1
+            // lblTable
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(103, 186);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(97, 24);
-            this.comboBox1.TabIndex = 19;
+            this.lblTable.AutoSize = true;
+            this.lblTable.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTable.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblTable.Location = new System.Drawing.Point(14, 166);
+            this.lblTable.Name = "lblTable";
+            this.lblTable.Size = new System.Drawing.Size(76, 32);
+            this.lblTable.TabIndex = 20;
+            this.lblTable.Text = "Table";
+            // 
+            // Table
+            // 
+            this.Table.HeaderText = "Table";
+            this.Table.MinimumWidth = 6;
+            this.Table.Name = "Table";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Item Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 115;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Quantity";
+            this.Column2.MinimumWidth = 4;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Size";
+            this.Column3.MinimumWidth = 4;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Price";
+            this.Column4.MinimumWidth = 4;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.Chocolate;
+            this.btnRemove.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(338, 423);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(124, 55);
+            this.btnRemove.TabIndex = 19;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.Chocolate;
+            this.btnPay.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.Location = new System.Drawing.Point(595, 423);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(124, 55);
+            this.btnPay.TabIndex = 20;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = false;
             // 
             // OrderForm
             // 
@@ -378,10 +426,14 @@
         private System.Windows.Forms.ComboBox cbxSize;
         private System.Windows.Forms.LinkLabel linklblLogOut;
         private System.Windows.Forms.Button btnExitOrder;
+        private System.Windows.Forms.ComboBox cbbTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblTable;
+        private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button btnRemove;
     }
 }
