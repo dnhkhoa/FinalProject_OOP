@@ -7,14 +7,22 @@ namespace FinalProject_OOP
 {
     public class Barista : Person
     {
-        public void PrepareCoffee()
+        public string ShiftDetails { get; set; }
+
+        public Barista(string name, string contactInfo, string shiftDetails)
+            : base(name, contactInfo)
         {
-            throw new System.NotImplementedException();
+            ShiftDetails = shiftDetails;
         }
 
-        public void ServesCoffee()
+        public void PrepareCoffee(string coffeeName)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"{Name} is preparing {coffeeName}.");
+        }
+
+        public void ServeCoffee(string coffeeName)
+        {
+            Console.WriteLine($"{Name} served {coffeeName}.");
         }
     }
 }

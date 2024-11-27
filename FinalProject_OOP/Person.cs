@@ -6,26 +6,34 @@ using System.Text;
 namespace FinalProject_OOP
 {
     public class Person
-    {
-        public string name
+    {   
+        public Person(string name, string contactInfo)
         {
-            get => default;
-            set
-            {
-            }
+            this.Name = name;
+            this.ContactInfo = contactInfo;
+        }
+        private string name;
+        private string contactInfo;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        
+        public string ContactInfo
+        {
+            get { return contactInfo; }
+            set { contactInfo = value; }
         }
 
-        public string contactInformation
+        public virtual string PrintDetails()
         {
-            get => default;
-            set
-            {
-            }
+            return ($"Name: {Name}, Contact: {ContactInfo}");
         }
-
-        public void PrintDetails()
+        public interface IPrintDetails
         {
-            throw new System.NotImplementedException();
+            string PrintDetails();
         }
     }
 }

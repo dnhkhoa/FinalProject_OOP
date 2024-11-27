@@ -7,14 +7,14 @@ namespace FinalProject_OOP
 {
     public class Manager : Person
     {
-        public void ManageInventory()
-        {
-            throw new System.NotImplementedException();
-        }
+        public List<string> Inventory { get; set; } = new List<string>();
 
-        public void ViewSalesReport()
+        public Manager(string name, string contactInfo) : base(name, contactInfo) { }
+
+        public void ManageInventory(string item)
         {
-            throw new System.NotImplementedException();
+            Inventory.Add(item);
+            Console.WriteLine($"{Name} added {item} to inventory.");
         }
     }
 }

@@ -8,24 +8,19 @@ namespace FinalProject_OOP
     public class Customer : Person
     {
 
-        public void OrderCoffee()
+        public string Order { get; set; }
+
+        public Customer(string name, string contactInfo) : base(name, contactInfo) { }
+
+        public void PlaceOrder(string coffeeName)
         {
-            throw new System.NotImplementedException();
+            Order = coffeeName;
+            Console.WriteLine($"{Name} ordered {coffeeName}.");
         }
 
-        public void HandlePayment()
+        public void PayForOrder(decimal amount)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void GenerateFeedback()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void PaysCoffee()
-        {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"{Name} paid {amount:C} for the order.");
         }
     }
 }

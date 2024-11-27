@@ -31,13 +31,12 @@
             this.lblPlaceOrder = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
-            this.cbbTable = new System.Windows.Forms.ComboBox();
+            this.cbxTable = new System.Windows.Forms.ComboBox();
             this.lblTable = new System.Windows.Forms.Label();
             this.cbxSize = new System.Windows.Forms.ComboBox();
             this.nudQantity = new System.Windows.Forms.NumericUpDown();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblQuantity = new System.Windows.Forms.Label();
-            this.txtItemName = new System.Windows.Forms.TextBox();
             this.lbItem = new System.Windows.Forms.Label();
             this.lblSize = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.ItemSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbxItemName = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,14 +68,14 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cbxItemName);
             this.panel2.Controls.Add(this.btnPay);
-            this.panel2.Controls.Add(this.cbbTable);
+            this.panel2.Controls.Add(this.cbxTable);
             this.panel2.Controls.Add(this.lblTable);
             this.panel2.Controls.Add(this.cbxSize);
             this.panel2.Controls.Add(this.nudQantity);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.lblQuantity);
-            this.panel2.Controls.Add(this.txtItemName);
             this.panel2.Controls.Add(this.lbItem);
             this.panel2.Controls.Add(this.lblSize);
             this.panel2.Controls.Add(this.lblPrice);
@@ -97,14 +97,14 @@
             this.btnPay.Text = "Pay";
             this.btnPay.UseVisualStyleBackColor = false;
             // 
-            // cbbTable
+            // cbxTable
             // 
-            this.cbbTable.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.cbbTable.FormattingEnabled = true;
-            this.cbbTable.Location = new System.Drawing.Point(146, 181);
-            this.cbbTable.Name = "cbbTable";
-            this.cbbTable.Size = new System.Drawing.Size(157, 24);
-            this.cbbTable.TabIndex = 20;
+            this.cbxTable.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.cbxTable.FormattingEnabled = true;
+            this.cbxTable.Location = new System.Drawing.Point(146, 181);
+            this.cbxTable.Name = "cbxTable";
+            this.cbxTable.Size = new System.Drawing.Size(157, 24);
+            this.cbxTable.TabIndex = 20;
             // 
             // lblTable
             // 
@@ -133,6 +133,7 @@
             this.nudQantity.Name = "nudQantity";
             this.nudQantity.Size = new System.Drawing.Size(157, 22);
             this.nudQantity.TabIndex = 14;
+            this.nudQantity.ValueChanged += new System.EventHandler(this.nudQantity_ValueChanged);
             // 
             // btnAdd
             // 
@@ -145,6 +146,7 @@
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblQuantity
             // 
@@ -156,15 +158,6 @@
             this.lblQuantity.Size = new System.Drawing.Size(102, 23);
             this.lblQuantity.TabIndex = 9;
             this.lblQuantity.Text = "Quantity";
-            // 
-            // txtItemName
-            // 
-            this.txtItemName.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.txtItemName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtItemName.Location = new System.Drawing.Point(146, 10);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(157, 22);
-            this.txtItemName.TabIndex = 11;
             // 
             // lbItem
             // 
@@ -273,6 +266,15 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(331, 434);
             this.flowLayoutPanel1.TabIndex = 19;
             // 
+            // cbxItemName
+            // 
+            this.cbxItemName.FormattingEnabled = true;
+            this.cbxItemName.Location = new System.Drawing.Point(146, 10);
+            this.cbxItemName.Name = "cbxItemName";
+            this.cbxItemName.Size = new System.Drawing.Size(158, 24);
+            this.cbxItemName.TabIndex = 22;
+            this.cbxItemName.SelectedIndexChanged += new System.EventHandler(this.cbxItemName_SelectedIndexChanged);
+            // 
             // UC_PlaceOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -301,13 +303,12 @@
         private System.Windows.Forms.NumericUpDown nudQantity;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Label lbItem;
         private System.Windows.Forms.Label lblSize;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btnPay;
-        private System.Windows.Forms.ComboBox cbbTable;
+        private System.Windows.Forms.ComboBox cbxTable;
         private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Table;
@@ -317,5 +318,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox cbxItemName;
     }
 }

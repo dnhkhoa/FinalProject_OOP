@@ -28,33 +28,7 @@ namespace FinalProject_OOP
                 return Text;
             }
         }
-        private void LoadFoodItems(int categoryId)
-        {
-            lstOrder.Items.Clear();
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT name, price FROM FoodCatagory WHERE idDrink = @CategoryId";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@CategoryId", categoryId);
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string item = $"{reader["name"]} - ${reader["price"]}";
-                        lstOrder.Items.Add(item);
-                        MessageBox.Show(item); // Hiển thị từng item được thêm
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading food items: " + ex.Message);
-                }
-            }
-        }
+       
         
 
         private void UpdatePrice()
@@ -264,6 +238,11 @@ namespace FinalProject_OOP
 
         private void btnAddCart_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtItemName.Text) || string.IsNullOrEmpty(cbxSize.Text) || nudQantity.Value==0)
+            {
+                MessageBox.Show("Please select an item first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int n = dataCart.Rows.Add();
             dataCart.Rows[n].Cells[0].Value = txtItemName.Text;
             dataCart.Rows[n].Cells[1].Value = nudQantity.Value;
