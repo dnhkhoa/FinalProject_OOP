@@ -53,6 +53,7 @@
             this.lbSize = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.nudQuantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundSearchButton)).BeginInit();
@@ -216,6 +217,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.cbxSize);
             this.panel1.Controls.Add(this.nudQantity);
             this.panel1.Controls.Add(this.btnAddCart);
@@ -323,6 +325,14 @@
             this.txtPrice.Size = new System.Drawing.Size(157, 22);
             this.txtPrice.TabIndex = 13;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(103, 186);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(97, 24);
+            this.comboBox1.TabIndex = 19;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -372,5 +382,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

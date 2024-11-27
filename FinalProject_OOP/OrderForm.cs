@@ -97,7 +97,7 @@ namespace FinalProject_OOP
         private void lstOrder_SelectedIndexChanged(object sender, EventArgs e)
         {
             nudQantity.ResetText();
-            cbxSize.Items.Clear();
+            
             txtPrice.Clear();
             string text = lstOrder.GetItemText(lstOrder.SelectedItem);
             txtItemName.Text = text;

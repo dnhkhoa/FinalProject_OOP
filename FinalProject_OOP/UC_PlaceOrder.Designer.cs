@@ -286,7 +286,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblPlaceOrder);
             this.Name = "UC_PlaceOrder";
-            this.Size = new System.Drawing.Size(816, 527);
+            this.Size = new System.Drawing.Size(689, 527);
             this.Load += new System.EventHandler(this.UC_PlaceOrder_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
