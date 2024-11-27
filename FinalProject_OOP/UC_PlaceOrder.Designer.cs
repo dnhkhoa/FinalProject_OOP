@@ -30,6 +30,7 @@
         {
             this.lblPlaceOrder = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbxItemName = new System.Windows.Forms.ComboBox();
             this.btnPay = new System.Windows.Forms.Button();
             this.cbxTable = new System.Windows.Forms.ComboBox();
             this.lblTable = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.ItemSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cbxItemName = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,6 +84,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 265);
             this.panel2.TabIndex = 17;
+            // 
+            // cbxItemName
+            // 
+            this.cbxItemName.FormattingEnabled = true;
+            this.cbxItemName.Location = new System.Drawing.Point(146, 10);
+            this.cbxItemName.Name = "cbxItemName";
+            this.cbxItemName.Size = new System.Drawing.Size(158, 24);
+            this.cbxItemName.TabIndex = 22;
+            this.cbxItemName.SelectedIndexChanged += new System.EventHandler(this.cbxItemName_SelectedIndexChanged);
             // 
             // btnPay
             // 
@@ -125,6 +134,7 @@
             this.cbxSize.Name = "cbxSize";
             this.cbxSize.Size = new System.Drawing.Size(157, 24);
             this.cbxSize.TabIndex = 18;
+            this.cbxSize.SelectedIndexChanged += new System.EventHandler(this.cbxSize_SelectedIndexChanged);
             // 
             // nudQantity
             // 
@@ -266,15 +276,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(331, 434);
             this.flowLayoutPanel1.TabIndex = 19;
             // 
-            // cbxItemName
-            // 
-            this.cbxItemName.FormattingEnabled = true;
-            this.cbxItemName.Location = new System.Drawing.Point(146, 10);
-            this.cbxItemName.Name = "cbxItemName";
-            this.cbxItemName.Size = new System.Drawing.Size(158, 24);
-            this.cbxItemName.TabIndex = 22;
-            this.cbxItemName.SelectedIndexChanged += new System.EventHandler(this.cbxItemName_SelectedIndexChanged);
-            // 
             // UC_PlaceOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,7 +286,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblPlaceOrder);
             this.Name = "UC_PlaceOrder";
-            this.Size = new System.Drawing.Size(690, 527);
+            this.Size = new System.Drawing.Size(816, 527);
             this.Load += new System.EventHandler(this.UC_PlaceOrder_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

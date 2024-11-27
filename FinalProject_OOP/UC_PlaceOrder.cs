@@ -179,5 +179,11 @@ namespace FinalProject_OOP
         {
 
         }
+
+        private void cbxSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtPrice.Clear();
+            nudQantity.ResetText();
+        }
     }
 }

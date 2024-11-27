@@ -103,11 +103,6 @@ namespace FinalProject_OOP
             txtItemName.Text = text;
             
         }
-
-        //private void bgroundBackOrder_Click(object sender, EventArgs e)
-        //{ 
-        //}
-
         private void linklblLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmLogin mainForm = new frmLogin();
@@ -193,6 +188,7 @@ namespace FinalProject_OOP
 
         private void nudQantity_ValueChanged(object sender, EventArgs e)
         {
+            txtPrice.Clear();
             if (string.IsNullOrEmpty(txtItemName.Text) || string.IsNullOrEmpty(cbxSize.Text))
             {
                 MessageBox.Show("Please select an item and size first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);  
@@ -238,11 +234,7 @@ namespace FinalProject_OOP
 
         private void btnAddCart_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtItemName.Text) || string.IsNullOrEmpty(cbxSize.Text) || nudQantity.Value==0)
-            {
-                MessageBox.Show("Please select an item first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+         
             int n = dataCart.Rows.Add();
             dataCart.Rows[n].Cells[0].Value = txtItemName.Text;
             dataCart.Rows[n].Cells[1].Value = nudQantity.Value;
