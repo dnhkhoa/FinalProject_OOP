@@ -79,8 +79,44 @@ namespace FinalProject_OOP
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {// Kiểm tra nếu người dùng đã nhấn vào một ô dữ liệu (không phải tiêu đề cột)
+            if (e.RowIndex >= 0)
+            {
+                if (MessageBox.Show("Delete item?", "Important Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                
+                    int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
+                    string query = "DELETE FROM DrinkCatagory WHERE id = @id";
+                    
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        try
+                        {
+                            conn.Open();
+
+                            using (SqlCommand cmd = new SqlCommand(query, conn))
+                            {
+                                // Thêm tham số cho câu lệnh SQL
+                                cmd.Parameters.AddWithValue("@id", id);
+
+                                // Thực thi câu lệnh DELETE
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // Sau khi xóa thành công, tải lại dữ liệu để cập nhật DataGridView
+                            string loadQuery = "SELECT * FROM dbo.DrinkCatagory";
+                            loadData(loadQuery);
+
+                            MessageBox.Show("Item deleted successfully!");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error deleting item: " + ex.Message);
+                        }
+                    }
+                }
+            }
         }
     }
 }
