@@ -34,7 +34,7 @@
             this.lblItemName = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.btnAddItems = new System.Windows.Forms.Button();
-            this.cbbCategory = new System.Windows.Forms.ComboBox();
+            this.cbxCategory = new System.Windows.Forms.ComboBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -46,7 +46,7 @@
             this.lblAddNewItem.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddNewItem.Location = new System.Drawing.Point(216, 65);
             this.lblAddNewItem.Name = "lblAddNewItem";
-            this.lblAddNewItem.Size = new System.Drawing.Size(257, 40);
+            this.lblAddNewItem.Size = new System.Drawing.Size(251, 39);
             this.lblAddNewItem.TabIndex = 0;
             this.lblAddNewItem.Text = "Add New Item";
             // 
@@ -89,14 +89,16 @@
             this.btnAddItems.TabIndex = 4;
             this.btnAddItems.Text = "Add Items";
             this.btnAddItems.UseVisualStyleBackColor = true;
+            this.btnAddItems.Click += new System.EventHandler(this.btnAddItems_Click);
             // 
-            // cbbCategory
+            // cbxCategory
             // 
-            this.cbbCategory.FormattingEnabled = true;
-            this.cbbCategory.Location = new System.Drawing.Point(192, 190);
-            this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(251, 24);
-            this.cbbCategory.TabIndex = 5;
+            this.cbxCategory.FormattingEnabled = true;
+            this.cbxCategory.Location = new System.Drawing.Point(192, 190);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(251, 24);
+            this.cbxCategory.TabIndex = 5;
+            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged);
             // 
             // txtPrice
             // 
@@ -125,7 +127,7 @@
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.cbbCategory);
+            this.Controls.Add(this.cbxCategory);
             this.Controls.Add(this.btnAddItems);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblItemName);
@@ -133,6 +135,7 @@
             this.Controls.Add(this.lblAddNewItem);
             this.Name = "UC_AddItems";
             this.Size = new System.Drawing.Size(690, 527);
+            this.Load += new System.EventHandler(this.UC_AddItems_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,7 +148,7 @@
         private System.Windows.Forms.Label lblItemName;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Button btnAddItems;
-        private System.Windows.Forms.ComboBox cbbCategory;
+        private System.Windows.Forms.ComboBox cbxCategory;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

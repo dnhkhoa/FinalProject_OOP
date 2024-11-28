@@ -50,7 +50,7 @@
             this.label1.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(27, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 40);
+            this.label1.Size = new System.Drawing.Size(238, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Update Items";
             // 
@@ -70,6 +70,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(177, 22);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -86,6 +87,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(621, 150);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // txtCategory
             // 
@@ -147,6 +149,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UC_UpdateItems
             // 

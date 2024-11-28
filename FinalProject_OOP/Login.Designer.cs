@@ -39,6 +39,8 @@
             this.lbOrder = new System.Windows.Forms.Label();
             this.btnExitLogin = new System.Windows.Forms.Button();
             this.checkBoxShowPass = new System.Windows.Forms.CheckBox();
+            this.lblAccountYet = new System.Windows.Forms.Label();
+            this.lblRegister = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bgroundLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,11 +154,34 @@
             this.checkBoxShowPass.UseVisualStyleBackColor = false;
             this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
             // 
+            // lblAccountYet
+            // 
+            this.lblAccountYet.AutoSize = true;
+            this.lblAccountYet.Location = new System.Drawing.Point(102, 498);
+            this.lblAccountYet.Name = "lblAccountYet";
+            this.lblAccountYet.Size = new System.Drawing.Size(136, 16);
+            this.lblAccountYet.TabIndex = 10;
+            this.lblAccountYet.Text = "Have no account yet?";
+            // 
+            // lblRegister
+            // 
+            this.lblRegister.AutoSize = true;
+            this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRegister.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblRegister.Location = new System.Drawing.Point(255, 498);
+            this.lblRegister.Name = "lblRegister";
+            this.lblRegister.Size = new System.Drawing.Size(88, 16);
+            this.lblRegister.TabIndex = 11;
+            this.lblRegister.Text = "Register here";
+            this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 548);
+            this.Controls.Add(this.lblRegister);
+            this.Controls.Add(this.lblAccountYet);
             this.Controls.Add(this.checkBoxShowPass);
             this.Controls.Add(this.btnExitLogin);
             this.Controls.Add(this.lbOrder);
@@ -190,5 +215,7 @@
         private System.Windows.Forms.Label lbOrder;
         private System.Windows.Forms.Button btnExitLogin;
         private System.Windows.Forms.CheckBox checkBoxShowPass;
+        private System.Windows.Forms.Label lblAccountYet;
+        private System.Windows.Forms.Label lblRegister;
     }
 }

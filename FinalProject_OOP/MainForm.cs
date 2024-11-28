@@ -12,8 +12,8 @@ namespace FinalProject_OOP
 {   
     
     public partial class MainForm : Form
-    {   
-        
+    {
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30";
         public MainForm()
         {
             InitializeComponent();
@@ -57,6 +57,7 @@ namespace FinalProject_OOP
 
         private void btnUpdateItems_Click(object sender, EventArgs e)
         {
+            
             uC_UpdateItems1.Visible = true;
             uC_UpdateItems1.BringToFront();
         }
@@ -83,5 +84,6 @@ namespace FinalProject_OOP
         {
 
         }
+
     }
 }

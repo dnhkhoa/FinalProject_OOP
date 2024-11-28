@@ -177,13 +177,23 @@ namespace FinalProject_OOP
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            int n = dataGridView1.Rows.Add();
+            dataGridView1.Rows[n].Cells[0].Value = cbxTable.Text;
+            dataGridView1.Rows[n].Cells[1].Value = cbxItemName.Text;
+            dataGridView1.Rows[n].Cells[2].Value = nudQantity.Text;
+            dataGridView1.Rows[n].Cells[3].Value = cbxSize.Text;
+            dataGridView1.Rows[n].Cells[4].Value = txtPrice.Text;
         }
 
         private void cbxSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtPrice.Clear();
             nudQantity.ResetText();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

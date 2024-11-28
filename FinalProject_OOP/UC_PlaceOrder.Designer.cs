@@ -43,13 +43,12 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Table = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -216,23 +215,30 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Table,
             this.ItemName,
-            this.UnitPrice,
             this.Quantity,
             this.ItemSize,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(351, 285);
+            this.dataGridView1.Location = new System.Drawing.Point(352, 285);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(320, 222);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 72);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(331, 434);
+            this.flowLayoutPanel1.TabIndex = 19;
             // 
             // Table
             // 
             this.Table.HeaderText = "Table";
             this.Table.MinimumWidth = 6;
             this.Table.Name = "Table";
-            this.Table.Width = 125;
+            this.Table.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // ItemName
             // 
@@ -241,15 +247,9 @@
             this.ItemName.Name = "ItemName";
             this.ItemName.Width = 125;
             // 
-            // UnitPrice
-            // 
-            this.UnitPrice.HeaderText = "Unit Price";
-            this.UnitPrice.MinimumWidth = 6;
-            this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 125;
-            // 
             // Quantity
             // 
+            this.Quantity.FillWeight = 55F;
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.MinimumWidth = 6;
             this.Quantity.Name = "Quantity";
@@ -260,21 +260,14 @@
             this.ItemSize.HeaderText = "Size";
             this.ItemSize.MinimumWidth = 6;
             this.ItemSize.Name = "ItemSize";
-            this.ItemSize.Width = 125;
+            this.ItemSize.Width = 50;
             // 
             // Price
             // 
             this.Price.HeaderText = "Price";
             this.Price.MinimumWidth = 6;
             this.Price.Name = "Price";
-            this.Price.Width = 125;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 72);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(331, 434);
-            this.flowLayoutPanel1.TabIndex = 19;
+            this.Price.Width = 50;
             // 
             // UC_PlaceOrder
             // 
@@ -312,13 +305,12 @@
         private System.Windows.Forms.ComboBox cbxTable;
         private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox cbxItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Table;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ComboBox cbxItemName;
     }
 }

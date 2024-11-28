@@ -45,7 +45,7 @@ namespace FinalProject_OOP
 
             var user = db.Accounts.FirstOrDefault(u => u.UserName == tUsername && u.PassWord == tPassword);
 
-            if (user != null )
+            if (user != null && user.Type==1 )
             {
                 MessageBox.Show("Login Successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -53,7 +53,22 @@ namespace FinalProject_OOP
                 mainForm.Show();
                 this.Hide();
             }
-            
+            else if (user != null && user.Type == 2)
+            {
+                MessageBox.Show("Login Successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+                this.Hide();
+            }
+            else if (user != null && user.Type == 3)
+            {
+                MessageBox.Show("Login Successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                OrderForm mainForm = new OrderForm();
+                mainForm.Show();
+                this.Hide();
+            }
             else
             {
                 MessageBox.Show("Incorrect Username/Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -77,5 +92,13 @@ namespace FinalProject_OOP
         {
             txtPassword.PasswordChar = checkBoxShowPass.Checked ? '\0' : '*';
         }
+
+        private void lblRegister_Click(object sender, EventArgs e)
+        {
+            Register mainForm = new Register();
+            mainForm.Show();
+            this.Hide();
+        }
+
     }
 }
