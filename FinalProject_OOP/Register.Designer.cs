@@ -43,6 +43,8 @@
             this.txtContact = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnExitRegister = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RePassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.lblRegister.Font = new System.Drawing.Font("Century Gothic", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegister.Location = new System.Drawing.Point(107, 63);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(256, 36);
+            this.lblRegister.Size = new System.Drawing.Size(246, 34);
             this.lblRegister.TabIndex = 1;
             this.lblRegister.Text = "Register Account";
             // 
@@ -71,7 +73,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(32, 130);
+            this.lblName.Location = new System.Drawing.Point(109, 130);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(70, 23);
             this.lblName.TabIndex = 2;
@@ -81,7 +83,7 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(32, 180);
+            this.lblUsername.Location = new System.Drawing.Point(71, 180);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(108, 23);
             this.lblUsername.TabIndex = 3;
@@ -91,7 +93,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(32, 231);
+            this.lblPassword.Location = new System.Drawing.Point(86, 231);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(100, 23);
             this.lblPassword.TabIndex = 4;
@@ -101,11 +103,12 @@
             // 
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(32, 280);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(97, 319);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(89, 23);
             this.lblPhoneNumber.TabIndex = 5;
             this.lblPhoneNumber.Text = "Contact";
+            this.lblPhoneNumber.Click += new System.EventHandler(this.lblPhoneNumber_Click);
             // 
             // lblAdreadyHave
             // 
@@ -129,30 +132,30 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(160, 130);
+            this.txtName.Location = new System.Drawing.Point(192, 130);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(177, 22);
+            this.txtName.Size = new System.Drawing.Size(167, 22);
             this.txtName.TabIndex = 8;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(160, 180);
+            this.txtUserName.Location = new System.Drawing.Point(192, 180);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(177, 22);
+            this.txtUserName.Size = new System.Drawing.Size(167, 22);
             this.txtUserName.TabIndex = 9;
             // 
             // txtPassWord
             // 
-            this.txtPassWord.Location = new System.Drawing.Point(160, 232);
+            this.txtPassWord.Location = new System.Drawing.Point(192, 231);
             this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(177, 22);
+            this.txtPassWord.Size = new System.Drawing.Size(167, 22);
             this.txtPassWord.TabIndex = 10;
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(160, 283);
+            this.txtContact.Location = new System.Drawing.Point(192, 319);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(177, 22);
+            this.txtContact.Size = new System.Drawing.Size(167, 22);
             this.txtContact.TabIndex = 11;
             // 
             // btnRegister
@@ -160,7 +163,7 @@
             this.btnRegister.BackColor = System.Drawing.Color.Black;
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(160, 330);
+            this.btnRegister.Location = new System.Drawing.Point(160, 363);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(177, 34);
             this.btnRegister.TabIndex = 12;
@@ -180,11 +183,30 @@
             this.btnExitRegister.UseVisualStyleBackColor = false;
             this.btnExitRegister.Click += new System.EventHandler(this.btnExitRegister_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(192, 276);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(167, 22);
+            this.textBox1.TabIndex = 14;
+            // 
+            // RePassword
+            // 
+            this.RePassword.AutoSize = true;
+            this.RePassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RePassword.Location = new System.Drawing.Point(3, 276);
+            this.RePassword.Name = "RePassword";
+            this.RePassword.Size = new System.Drawing.Size(183, 23);
+            this.RePassword.TabIndex = 15;
+            this.RePassword.Text = "Confirm Password";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 551);
+            this.Controls.Add(this.RePassword);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnExitRegister);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtContact);
@@ -225,5 +247,7 @@
         private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnExitRegister;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label RePassword;
     }
 }
