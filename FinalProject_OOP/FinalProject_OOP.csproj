@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="Printer.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
+using DGVPrinterHelper;
 using static FinalProject_OOP.OrderForm;
 
 namespace FinalProject_OOP
@@ -194,6 +196,25 @@ namespace FinalProject_OOP
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Customer Bill";
+            printer.SubTitle=string.Format("Date: {0}", DateTime.Now.Date.ToString());
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns=true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Total: " + Price.DataGridView;
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dataGridView1);
+
+            
+            dataGridView1.Rows.Clear(); 
+            
         }
     }
 }
