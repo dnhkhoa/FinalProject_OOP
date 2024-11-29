@@ -19,7 +19,12 @@ namespace FinalProject_OOP
         {
             InitializeComponent();
         }
-
+        public void RefreshData()
+        {
+            
+            string query = "SELECT * FROM dbo.DrinkCatagory";
+            loadData(query);
+        }
         private void UC_UpdateItems_Load(object sender, EventArgs e)
         {
             string query = "select * from dbo.DrinkCatagory";
@@ -109,11 +114,11 @@ namespace FinalProject_OOP
                 int category;
                 if (txtCategory.Text == "Drinks")
                 {
-                    category = 1; // Drinks is mapped to 1
+                    category = 1; 
                 }
                 else if (txtCategory.Text == "Cakes")
                 {
-                    category = 2; // Cakes is mapped to 2
+                    category = 2; 
                 }
                 else
                 {

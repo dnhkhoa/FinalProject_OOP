@@ -13,6 +13,8 @@ namespace FinalProject_OOP
     
     public partial class MainForm : Form
     {
+        private UC_UpdateItems ucUpdateItems;
+        private UC_AddItems ucAddItems;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30";
         public MainForm()
         {
@@ -23,19 +25,18 @@ namespace FinalProject_OOP
       
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // Khởi tạo UC_UpdateItems trước
+            ucUpdateItems = new UC_UpdateItems();
+
+            // Truyền tham chiếu UC_UpdateItems vào UC_AddItems
+            ucAddItems = new UC_AddItems(ucUpdateItems);
             uC_AddItems1.Hide();
             uC_UpdateItems1.Hide();
             uC_RemoveItems1.Hide();
             uC_Income1.Hide();
         }
 
-        //private void bgroundExitMain_Click(object sender, EventArgs e)
-        //{
-        //}
-
-        //private void bgroundBackMain_Click(object sender, EventArgs e)
-        //{
-        //}
+     
 
         private void linklblLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

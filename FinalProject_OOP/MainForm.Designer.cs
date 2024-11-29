@@ -41,7 +41,7 @@
             this.uC_Income1 = new FinalProject_OOP.UC_Income();
             this.uC_RemoveItems1 = new FinalProject_OOP.UC_RemoveItems();
             this.uC_UpdateItems1 = new FinalProject_OOP.UC_UpdateItems();
-            this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems();
+            this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems(this.uC_UpdateItems1);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();

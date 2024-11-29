@@ -13,18 +13,14 @@ namespace FinalProject_OOP
 {
     public partial class UC_AddItems : UserControl
     {
-        //private UC_UpdateItems updateForm; 
-
-        
-        //public AddItemForm(UC_UpdateItems updateForm)
-        //{
-        //    InitializeComponent();
-        //    this.updateForm = updateForm; 
-        //}
+        private UC_UpdateItems updateItems; // Tham chiếu tới UC_UpdateItems
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30;Encrypt=False";
-        public UC_AddItems()
+        
+
+        public UC_AddItems(UC_UpdateItems updateItems)
         {
             InitializeComponent();
+            this.updateItems = updateItems;
         }
 
         private void cbbCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,6 +115,7 @@ namespace FinalProject_OOP
                     MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            updateItems.RefreshData();
         }
     }
 }

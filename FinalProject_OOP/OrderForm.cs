@@ -241,5 +241,10 @@ namespace FinalProject_OOP
             dataCart.Rows[n].Cells[2].Value = cbxSize.Text;
             dataCart.Rows[n].Cells[3].Value = txtPrice.Text;
         }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
