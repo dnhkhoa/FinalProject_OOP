@@ -106,5 +106,9 @@ namespace FinalProject_OOP
             }
         }
 
+        private void lblPhoneNumber_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
