@@ -150,20 +150,7 @@
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = false;
             this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.BurlyWood;
-            this.panel2.Controls.Add(this.uC_PlaceOrder1);
-            this.panel2.Controls.Add(this.uC_Income1);
-            this.panel2.Controls.Add(this.uC_RemoveItems1);
-            this.panel2.Controls.Add(this.uC_UpdateItems1);
-            this.panel2.Controls.Add(this.uC_AddItems1);
-            this.panel2.Location = new System.Drawing.Point(214, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(690, 527);
-            this.panel2.TabIndex = 1;
-            // 
+            
             // uC_PlaceOrder1
             // 
             this.uC_PlaceOrder1.BackColor = System.Drawing.Color.BurlyWood;
@@ -204,6 +191,19 @@
             this.uC_AddItems1.Name = "uC_AddItems1";
             this.uC_AddItems1.Size = new System.Drawing.Size(690, 527);
             this.uC_AddItems1.TabIndex = 0;
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.BurlyWood;
+            this.panel2.Controls.Add(this.uC_PlaceOrder1);
+            this.panel2.Controls.Add(this.uC_Income1);
+            this.panel2.Controls.Add(this.uC_RemoveItems1);
+            this.panel2.Controls.Add(this.uC_UpdateItems1);
+            this.panel2.Controls.Add(this.uC_AddItems1);
+            this.panel2.Location = new System.Drawing.Point(214, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(690, 527);
+            this.panel2.TabIndex = 1;
+            // 
             // 
             // MainForm
             // 
@@ -222,7 +222,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-
+            
         }
 
         #endregion
