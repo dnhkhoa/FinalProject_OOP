@@ -35,53 +35,48 @@ namespace FinalProject_OOP
         {
             if (txtUsername.Text == "" || txtPassword.Text == "")
             {
-                MessageBox.Show("Please fill all Username and Password", "Error input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter both Username and Password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            DataDataContext db = new DataDataContext(con);
-
-            string tUsername = txtUsername.Text;
-            string tPassword = txtPassword.Text;
-
-            var user = db.Accounts.FirstOrDefault(u => u.UserName == tUsername && u.PassWord == tPassword);
-
-            if (user != null && user.Type==1 )
+            // Chuỗi kết nối SQL
+            using (SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30;Encrypt=False"))
             {
-                MessageBox.Show("Login Successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    connection.Open();
 
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
-                this.Hide();
-            }
-            else if (user != null && user.Type == 2)
-            {
-                MessageBox.Show("Login Successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Kiểm tra thông tin đăng nhập
+                    string query = "SELECT COUNT(*) FROM Account WHERE UserName = @userName AND PassWord = @password";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@userName", txtUsername.Text.Trim());
+                    cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
 
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
-                this.Hide();
-            }
-            else if (user != null && user.Type == 3)
-            {
-                MessageBox.Show("Login Successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int count = (int)cmd.ExecuteScalar();
 
-                OrderForm mainForm = new OrderForm();
-                mainForm.Show();
-                this.Hide();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Mở form tiếp theo
+                        MainForm mainForm = new MainForm();
+                        this.Hide();
+                        mainForm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Incorrect Username/Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+
         }
 
-        private void lbOrder_Click(object sender, EventArgs e)
-        {
-            OrderForm mainForm = new OrderForm();
-            mainForm.Show();
-            this.Hide();
-        }
+ 
 
         private void btnExitLogin_Click(object sender, EventArgs e)
         {

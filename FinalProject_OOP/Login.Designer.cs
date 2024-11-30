@@ -36,7 +36,6 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lbOrder = new System.Windows.Forms.Label();
             this.btnExitLogin = new System.Windows.Forms.Button();
             this.checkBoxShowPass = new System.Windows.Forms.CheckBox();
             this.lblAccountYet = new System.Windows.Forms.Label();
@@ -116,19 +115,6 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // lbOrder
-            // 
-            this.lbOrder.AutoSize = true;
-            this.lbOrder.BackColor = System.Drawing.Color.Transparent;
-            this.lbOrder.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOrder.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbOrder.Location = new System.Drawing.Point(154, 351);
-            this.lbOrder.Name = "lbOrder";
-            this.lbOrder.Size = new System.Drawing.Size(168, 20);
-            this.lbOrder.TabIndex = 7;
-            this.lbOrder.Text = "Continue as customer";
-            this.lbOrder.Click += new System.EventHandler(this.lbOrder_Click);
-            // 
             // btnExitLogin
             // 
             this.btnExitLogin.BackColor = System.Drawing.Color.Transparent;
@@ -184,7 +170,6 @@
             this.Controls.Add(this.lblAccountYet);
             this.Controls.Add(this.checkBoxShowPass);
             this.Controls.Add(this.btnExitLogin);
-            this.Controls.Add(this.lbOrder);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lbPassword);
@@ -212,7 +197,6 @@
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lbOrder;
         private System.Windows.Forms.Button btnExitLogin;
         private System.Windows.Forms.CheckBox checkBoxShowPass;
         private System.Windows.Forms.Label lblAccountYet;

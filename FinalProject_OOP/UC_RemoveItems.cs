@@ -13,6 +13,7 @@ namespace FinalProject_OOP
 {
     public partial class UC_RemoveItems : UserControl
     {
+        private UC_UpdateItems updateItems; // Tham chiếu tới UC_UpdateItems
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30";
         public UC_RemoveItems()
         {
@@ -65,6 +66,12 @@ namespace FinalProject_OOP
                     MessageBox.Show("Error loading data: " + ex.Message);
                 }
             }
+        }
+        public void RefreshData()
+        {
+
+            string query = "SELECT * FROM dbo.DrinkCatagory";
+            loadData(query);
         }
         private void UC_RemoveItems_Load(object sender, EventArgs e)
         {

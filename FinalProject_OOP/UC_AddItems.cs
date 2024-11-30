@@ -14,6 +14,7 @@ namespace FinalProject_OOP
     public partial class UC_AddItems : UserControl
     {
         private UC_UpdateItems updateItems; // Tham chiếu tới UC_UpdateItems
+        private UC_RemoveItems removeItems;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30;Encrypt=False";
         
 
@@ -45,13 +46,13 @@ namespace FinalProject_OOP
                 MessageBox.Show("Please fill all fields!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            
             if (!decimal.TryParse(priceText, out decimal price) || price <= 0)
             {
                 MessageBox.Show("Price must be a valid positive number!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (category == "1")
+            if (category == "Drinks")
             {
                 idDrink = 1;
             }
@@ -116,6 +117,7 @@ namespace FinalProject_OOP
                 }
             }
             updateItems.RefreshData();
+            removeItems.RefreshData();
         }
     }
 }
