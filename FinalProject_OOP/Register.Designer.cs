@@ -43,7 +43,7 @@
             this.txtContact = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnExitRegister = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.RePassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -183,12 +183,12 @@
             this.btnExitRegister.UseVisualStyleBackColor = false;
             this.btnExitRegister.Click += new System.EventHandler(this.btnExitRegister_Click);
             // 
-            // textBox1
+            // txtConfirmPass
             // 
-            this.textBox1.Location = new System.Drawing.Point(192, 276);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 22);
-            this.textBox1.TabIndex = 14;
+            this.txtConfirmPass.Location = new System.Drawing.Point(192, 276);
+            this.txtConfirmPass.Name = "txtConfirmPass";
+            this.txtConfirmPass.Size = new System.Drawing.Size(167, 22);
+            this.txtConfirmPass.TabIndex = 14;
             // 
             // RePassword
             // 
@@ -206,7 +206,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 551);
             this.Controls.Add(this.RePassword);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConfirmPass);
             this.Controls.Add(this.btnExitRegister);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtContact);
@@ -247,7 +247,7 @@
         private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnExitRegister;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConfirmPass;
         private System.Windows.Forms.Label RePassword;
     }
 }
