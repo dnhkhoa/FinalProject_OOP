@@ -45,6 +45,7 @@
             this.btnExitRegister = new System.Windows.Forms.Button();
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.RePassword = new System.Windows.Forms.Label();
+            this.checkBoxShowPass = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,6 +149,7 @@
             // 
             this.txtPassWord.Location = new System.Drawing.Point(192, 231);
             this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.PasswordChar = '*';
             this.txtPassWord.Size = new System.Drawing.Size(167, 22);
             this.txtPassWord.TabIndex = 10;
             // 
@@ -163,7 +165,7 @@
             this.btnRegister.BackColor = System.Drawing.Color.Black;
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(160, 363);
+            this.btnRegister.Location = new System.Drawing.Point(182, 396);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(177, 34);
             this.btnRegister.TabIndex = 12;
@@ -187,6 +189,7 @@
             // 
             this.txtConfirmPass.Location = new System.Drawing.Point(192, 276);
             this.txtConfirmPass.Name = "txtConfirmPass";
+            this.txtConfirmPass.PasswordChar = '*';
             this.txtConfirmPass.Size = new System.Drawing.Size(167, 22);
             this.txtConfirmPass.TabIndex = 14;
             // 
@@ -200,11 +203,25 @@
             this.RePassword.TabIndex = 15;
             this.RePassword.Text = "Confirm Password";
             // 
+            // checkBoxShowPass
+            // 
+            this.checkBoxShowPass.AutoSize = true;
+            this.checkBoxShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxShowPass.Location = new System.Drawing.Point(230, 358);
+            this.checkBoxShowPass.Name = "checkBoxShowPass";
+            this.checkBoxShowPass.Size = new System.Drawing.Size(129, 20);
+            this.checkBoxShowPass.TabIndex = 16;
+            this.checkBoxShowPass.Text = "Show PassWord";
+            this.checkBoxShowPass.UseVisualStyleBackColor = false;
+            this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 551);
+            this.Controls.Add(this.checkBoxShowPass);
             this.Controls.Add(this.RePassword);
             this.Controls.Add(this.txtConfirmPass);
             this.Controls.Add(this.btnExitRegister);
@@ -249,5 +266,6 @@
         private System.Windows.Forms.Button btnExitRegister;
         private System.Windows.Forms.TextBox txtConfirmPass;
         private System.Windows.Forms.Label RePassword;
+        private System.Windows.Forms.CheckBox checkBoxShowPass;
     }
 }
