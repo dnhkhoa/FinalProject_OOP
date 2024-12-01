@@ -14,6 +14,7 @@ namespace FinalProject_OOP
    
     public partial class UC_UpdateItems : UserControl
     {
+
         private UC_RemoveItems removeItems;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30";
         public UC_UpdateItems()

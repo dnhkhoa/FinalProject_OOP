@@ -76,7 +76,7 @@
             // linklblLogOut
             // 
             this.linklblLogOut.AutoSize = true;
-            this.linklblLogOut.Font = new System.Drawing.Font("Century", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.linklblLogOut.Font = new System.Drawing.Font("Century", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linklblLogOut.Location = new System.Drawing.Point(65, 482);
             this.linklblLogOut.Name = "linklblLogOut";
@@ -150,7 +150,7 @@
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = false;
             this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
-            
+
             // uC_PlaceOrder1
             // 
             this.uC_PlaceOrder1.BackColor = System.Drawing.Color.BurlyWood;
@@ -222,7 +222,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            
+
         }
 
         #endregion
@@ -243,4 +243,3 @@
         private UC_PlaceOrder uC_PlaceOrder1;
     }
 }
-
