@@ -43,6 +43,7 @@
             this.uC_UpdateItems1 = new FinalProject_OOP.UC_UpdateItems();
             this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems();
             this.lblRegister = new System.Windows.Forms.Label();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
+            this.panel1.Controls.Add(this.btnAccount);
             this.panel1.Controls.Add(this.lblRegister);
             this.panel1.Controls.Add(this.btnExitMain);
             this.panel1.Controls.Add(this.linklblLogOut);
@@ -221,6 +223,18 @@
             this.lblRegister.Text = "Register";
             this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
             // 
+            // btnAccount
+            // 
+            this.btnAccount.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnAccount.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnAccount.Location = new System.Drawing.Point(14, 397);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(202, 54);
+            this.btnAccount.TabIndex = 13;
+            this.btnAccount.Text = "Account";
+            this.btnAccount.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -258,5 +272,6 @@
         private UC_Income uC_Income1;
         private UC_PlaceOrder uC_PlaceOrder1;
         private System.Windows.Forms.Label lblRegister;
+        private System.Windows.Forms.Button btnAccount;
     }
 }
