@@ -86,6 +86,8 @@
             // 
             // cbxItemName
             // 
+            this.cbxItemName.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.cbxItemName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cbxItemName.FormattingEnabled = true;
             this.cbxItemName.Location = new System.Drawing.Point(146, 10);
             this.cbxItemName.Name = "cbxItemName";
