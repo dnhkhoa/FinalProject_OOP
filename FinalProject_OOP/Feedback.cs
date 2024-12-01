@@ -29,14 +29,21 @@ namespace FinalProject_OOP
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank you for using our cafe's services", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            txtFeedback.Clear();
-            cbbPayment.Items.Clear();
-            cbbPrintBill.Items.Clear();
+            if (cbbPayment == null || cbbPrintBill == null)
+            {
+                MessageBox.Show("Please choose all the items", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (cbbPayment != null || cbbPrintBill !=null) 
+            {
+                MessageBox.Show("Thank you for using our cafe's services", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtFeedback.Clear();
+                cbbPayment.Items.Clear();
+                cbbPrintBill.Items.Clear();
 
-            OrderForm mainForm = new OrderForm();
-            mainForm.Show();
-            this.Hide();
+                OrderForm mainForm = new OrderForm();
+                mainForm.Show();
+                this.Hide();
+            }
         }
     }
 }
