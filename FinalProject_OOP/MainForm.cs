@@ -15,14 +15,42 @@ namespace FinalProject_OOP
     {
         private UC_UpdateItems ucUpdateItems;
         private UC_AddItems ucAddItems;
+        private int UserRole; // Lưu trữ role của người dùng
+
+      
+        // Các UserControl phải được thêm vào đây
+        
+
+    
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30";
-        public MainForm()
+        public MainForm(int role)
         {
             InitializeComponent();
-        
+
+            // Gán giá trị role cho biến toàn cục UserRole
+            UserRole = role;
+
+
+            // Thiết lập hiển thị dựa trên role
+            if (UserRole == 1) // Admin
+            {
+                btnAddItems.Show();
+                btnRemoveItems.Show();
+                btnUpdateItems.Show();
+                btnIncome.Show();
+                btnPlaceOrder.Show();
+            }
+            else if (UserRole == 2) // Barista
+            {
+                btnAddItems.Hide();
+                btnRemoveItems.Hide();
+                btnUpdateItems.Hide();
+                btnIncome.Hide();
+                btnPlaceOrder.Show();
+            }
+
         }
         
-      
         private void MainForm_Load(object sender, EventArgs e)
         {
             // Khởi tạo UC_UpdateItems trước

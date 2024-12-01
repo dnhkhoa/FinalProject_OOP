@@ -16,8 +16,11 @@ namespace FinalProject_OOP
         private UC_UpdateItems updateItems; // Tham chiếu tới UC_UpdateItems
         private UC_RemoveItems removeItems;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\Coffee Management System.mdf\";Integrated Security=True;Connect Timeout=30;Encrypt=False";
-        
 
+        public UC_AddItems()
+        {
+            // Constructor mặc định nếu không cần tham số
+        }
         public UC_AddItems(UC_UpdateItems updateItems)
         {
             InitializeComponent();

@@ -77,7 +77,7 @@ namespace FinalProject_OOP
                     insertCmd.Parameters.AddWithValue("@displayName", txtName.Text.Trim());
                     insertCmd.Parameters.AddWithValue("@userName", txtUserName.Text.Trim());
                     insertCmd.Parameters.AddWithValue("@password", txtPassWord.Text.Trim());
-                    insertCmd.Parameters.AddWithValue("@accountType", 0); // Default AccountType
+                    insertCmd.Parameters.AddWithValue("@accountType", 3); // Default AccountType
                     insertCmd.Parameters.AddWithValue("@phoneNumber", txtContact.Text.Trim());
 
                     int rowsAffected = insertCmd.ExecuteNonQuery();

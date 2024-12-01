@@ -200,21 +200,50 @@ namespace FinalProject_OOP
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+
+            if (!string.IsNullOrEmpty(cbxTable.Text))
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+
+                        // Cập nhật trạng thái bàn trong cơ sở dữ liệu
+                        string query = "UPDATE TableCoffee SET status = 'Occupied' WHERE name = @tableName";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@tableName", cbxTable.Text);
+                        cmd.ExecuteNonQuery();
+
+                        // Thông báo thành công
+                        MessageBox.Show("Payment successful! Table marked as Occupied.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating table status: " + ex.Message);
+                    }
+                }
+            }
+
             DGVPrinter printer = new DGVPrinter();
             printer.Title = "Customer Bill";
-            printer.SubTitle=string.Format("Date: {0}", DateTime.Now.Date.ToString());
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date.ToString());
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
             printer.PageNumbers = true;
             printer.PageNumberInHeader = false;
-            printer.PorportionalColumns=true;
+            printer.PorportionalColumns = true;
             printer.HeaderCellAlignment = StringAlignment.Near;
-            printer.Footer = "Total: " + Price.DataGridView;
+            printer.Footer = "Thank you for your visit!";
             printer.FooterSpacing = 15;
             printer.PrintDataGridView(dataGridView1);
 
-            
-            dataGridView1.Rows.Clear(); 
-            
+            // Xóa danh sách order
+            dataGridView1.Rows.Clear();
+
+            // Vẽ lại danh sách bàn
+            flowLayoutPanel1.Controls.Clear();
+            DrawTable();
+
         }
     }
 }

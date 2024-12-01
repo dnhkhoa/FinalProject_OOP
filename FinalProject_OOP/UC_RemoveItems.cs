@@ -86,36 +86,48 @@ namespace FinalProject_OOP
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {// Kiểm tra nếu người dùng đã nhấn vào một ô dữ liệu (không phải tiêu đề cột)
+        {
             if (e.RowIndex >= 0)
             {
                 if (MessageBox.Show("Delete item?", "Important Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
-                
                     int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                    string query = "DELETE FROM DrinkCatagory WHERE id = @id";
-                    
+                    string deleteQuery = "DELETE FROM DrinkCatagory WHERE id = @id";
+                    string resequenceQuery = @"
+                WITH CTE AS (
+                    SELECT id, ROW_NUMBER() OVER (ORDER BY id) AS NewID
+                    FROM DrinkCatagory
+                )
+                UPDATE DrinkCatagory
+                SET id = CTE.NewID
+                FROM DrinkCatagory
+                INNER JOIN CTE ON DrinkCatagory.id = CTE.id;";
+
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         try
                         {
                             conn.Open();
 
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
+                            // Xóa mục
+                            using (SqlCommand cmd = new SqlCommand(deleteQuery, conn))
                             {
-                                // Thêm tham số cho câu lệnh SQL
                                 cmd.Parameters.AddWithValue("@id", id);
-
-                                // Thực thi câu lệnh DELETE
                                 cmd.ExecuteNonQuery();
                             }
 
-                            // Sau khi xóa thành công, tải lại dữ liệu để cập nhật DataGridView
+                            // Tái đánh số ID
+                            using (SqlCommand cmd = new SqlCommand(resequenceQuery, conn))
+                            {
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // Tải lại dữ liệu
                             string loadQuery = "SELECT * FROM dbo.DrinkCatagory";
                             loadData(loadQuery);
 
-                            MessageBox.Show("Item deleted successfully!");
+                            MessageBox.Show("Item deleted and IDs updated successfully!");
                         }
                         catch (Exception ex)
                         {
