@@ -1,58 +1,54 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Data;
-//using System.Drawing.Text;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using System.Text;
-//using System.Data.SqlClient;
-//namespace FinalProject_OOP
-//{
-//    public class Table
-//    {
-//        SqlConnection con = new SqlConnection("Data Source=DINHKHOA;Initial Catalog=COFFEE;Integrated Security=True;Trust Server Certificate=True");
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 
-//        public Table(int id, string name, string status)
-//        {
-//            this.ID = id;
-//            this.Name = name;
-//            this.Status = status;
-//        }
-//        private string name;
-//        public string Name
-//        {
-//            get { return name; }
-//            set { name = value; }
-//        }
-//        private string status;
-//        public string Status
-//        {
-//            get { return status; }
-//            set { status = value; }
-//        }
+namespace FinalProject_OOP
+{
+    public class Table
+    {
+        public int Id { get; private set; }
+        public string Name { get; private set; }
+        public string Status { get; private set; }
+        public float TotalAmount { get; set; }
 
-//        private int iD;
-//        public int ID
-//        {
-//            get { return iD; }
-//            set { iD = value; }
-//        }
-//    }
-//    public class TableSet
-//    {
-//        private static TableSet instance;
-//        public static TableSet Instance
-//        {
-//            get { if (instance == null) instance = new TableSet(); return TableSet.instance; }
-//            private set { TableSet.instance = value; }
-//        }
-//        public List<Table> LoadTableList()
-//        {
-//            List<Table> list = new List<Table>();
-//            DataTable data = DataProvider.Ins
-            
-//            return list;
-//        }
-//    }
-//}
+        private string connectionString;
+
+        public Table(int id, string name, string status, string connectionString)
+        {
+            Id = id;
+            Name = name;
+            Status = status;
+            this.connectionString = connectionString;
+        }
+
+        // Cập nhật trạng thái của bàn
+        public void UpdateStatus(string newStatus)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE TableCoffee SET status = @Status WHERE id = @Id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Status", newStatus);
+                cmd.Parameters.AddWithValue("@Id", Id);
+                cmd.ExecuteNonQuery();
+            }
+
+            Status = newStatus;
+        }
+
+        // Lấy danh sách bàn từ cơ sở dữ liệu
+        public static DataTable GetTables(string connectionString)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT id, name, status FROM TableCoffee";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataTable tableData = new DataTable();
+                adapter.Fill(tableData);
+                return tableData;
+            }
+        }
+    }
+}

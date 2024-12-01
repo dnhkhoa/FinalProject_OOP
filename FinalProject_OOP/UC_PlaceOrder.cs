@@ -224,6 +224,58 @@ namespace FinalProject_OOP
                     }
                 }
             }
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.Cells[0].Value != null) // Kiểm tra dòng không rỗng
+                        {
+                            string tableName = row.Cells[0].Value.ToString(); // Lấy tên bàn
+                            float totalAmount = 0;
+
+                            // Tính tổng tiền từ DataGridView
+                            foreach (DataGridViewRow subRow in dataGridView1.Rows)
+                            {
+                                if (subRow.Cells[4].Value != null)
+                                {
+                                    totalAmount += float.Parse(subRow.Cells[4].Value.ToString());
+                                }
+                            }
+
+                            // Ngày thanh toán
+                            DateTime orderDate = DateTime.Now;
+
+                            // Truy vấn cập nhật
+                            string query = @"INSERT Orders
+                                     SET TotalAmount = @TotalAmount,
+                                         OrderDate = @OrderDate,
+                                         Status = 'Paid'
+                                     WHERE TableName = @TableName";
+
+                            using (SqlCommand cmd = new SqlCommand(query, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@TotalAmount", totalAmount);
+                                cmd.Parameters.AddWithValue("@OrderDate", orderDate);
+                                cmd.Parameters.AddWithValue("@TableName", tableName);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Payment successful! Orders updated.", "Payment");
+
+                    // Xóa DataGridView sau khi thanh toán
+                    dataGridView1.Rows.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error processing payment: {ex.Message}");
+            }
 
             DGVPrinter printer = new DGVPrinter();
             printer.Title = "Customer Bill";
