@@ -244,7 +244,9 @@ namespace FinalProject_OOP
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-
+            Feedback mainForm = new Feedback();
+            mainForm.Show();
+            this.Hide();
         }
     }
 }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPayment = new System.Windows.Forms.Label();
-            this.lblPrintBill = new System.Windows.Forms.Label();
-            this.lblFeedback = new System.Windows.Forms.Label();
-            this.txtFeedback = new System.Windows.Forms.TextBox();
-            this.cbbPayment = new System.Windows.Forms.ComboBox();
-            this.cbbPrintBill = new System.Windows.Forms.ComboBox();
             this.btnAccept = new System.Windows.Forms.Button();
+            this.cbbPrintBill = new System.Windows.Forms.ComboBox();
+            this.cbbPayment = new System.Windows.Forms.ComboBox();
+            this.txtFeedback = new System.Windows.Forms.TextBox();
+            this.lblFeedback = new System.Windows.Forms.Label();
+            this.lblPrintBill = new System.Windows.Forms.Label();
+            this.lblPayment = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,44 +55,29 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lblPayment
+            // btnAccept
             // 
-            this.lblPayment.AutoSize = true;
-            this.lblPayment.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayment.Location = new System.Drawing.Point(20, 72);
-            this.lblPayment.Name = "lblPayment";
-            this.lblPayment.Size = new System.Drawing.Size(195, 28);
-            this.lblPayment.TabIndex = 0;
-            this.lblPayment.Text = "Payment Method";
+            this.btnAccept.BackColor = System.Drawing.Color.BurlyWood;
+            this.btnAccept.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Location = new System.Drawing.Point(137, 443);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(127, 53);
+            this.btnAccept.TabIndex = 6;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.UseVisualStyleBackColor = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
-            // lblPrintBill
+            // cbbPrintBill
             // 
-            this.lblPrintBill.AutoSize = true;
-            this.lblPrintBill.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrintBill.Location = new System.Drawing.Point(20, 162);
-            this.lblPrintBill.Name = "lblPrintBill";
-            this.lblPrintBill.Size = new System.Drawing.Size(307, 28);
-            this.lblPrintBill.TabIndex = 1;
-            this.lblPrintBill.Text = "Would you like to print bill?";
-            // 
-            // lblFeedback
-            // 
-            this.lblFeedback.AutoSize = true;
-            this.lblFeedback.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFeedback.Location = new System.Drawing.Point(20, 257);
-            this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(286, 28);
-            this.lblFeedback.TabIndex = 2;
-            this.lblFeedback.Text = "Please give your feedback";
-            // 
-            // txtFeedback
-            // 
-            this.txtFeedback.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txtFeedback.Location = new System.Drawing.Point(46, 288);
-            this.txtFeedback.Multiline = true;
-            this.txtFeedback.Name = "txtFeedback";
-            this.txtFeedback.Size = new System.Drawing.Size(306, 121);
-            this.txtFeedback.TabIndex = 3;
+            this.cbbPrintBill.BackColor = System.Drawing.Color.LemonChiffon;
+            this.cbbPrintBill.FormattingEnabled = true;
+            this.cbbPrintBill.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.cbbPrintBill.Location = new System.Drawing.Point(46, 193);
+            this.cbbPrintBill.Name = "cbbPrintBill";
+            this.cbbPrintBill.Size = new System.Drawing.Size(121, 24);
+            this.cbbPrintBill.TabIndex = 5;
             // 
             // cbbPayment
             // 
@@ -107,28 +92,44 @@
             this.cbbPayment.Size = new System.Drawing.Size(121, 24);
             this.cbbPayment.TabIndex = 4;
             // 
-            // cbbPrintBill
+            // txtFeedback
             // 
-            this.cbbPrintBill.BackColor = System.Drawing.Color.LemonChiffon;
-            this.cbbPrintBill.FormattingEnabled = true;
-            this.cbbPrintBill.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.cbbPrintBill.Location = new System.Drawing.Point(46, 193);
-            this.cbbPrintBill.Name = "cbbPrintBill";
-            this.cbbPrintBill.Size = new System.Drawing.Size(121, 24);
-            this.cbbPrintBill.TabIndex = 5;
+            this.txtFeedback.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txtFeedback.Location = new System.Drawing.Point(46, 288);
+            this.txtFeedback.Multiline = true;
+            this.txtFeedback.Name = "txtFeedback";
+            this.txtFeedback.Size = new System.Drawing.Size(306, 121);
+            this.txtFeedback.TabIndex = 3;
             // 
-            // btnAccept
+            // lblFeedback
             // 
-            this.btnAccept.BackColor = System.Drawing.Color.BurlyWood;
-            this.btnAccept.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccept.Location = new System.Drawing.Point(137, 443);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(127, 53);
-            this.btnAccept.TabIndex = 6;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = false;
+            this.lblFeedback.AutoSize = true;
+            this.lblFeedback.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeedback.Location = new System.Drawing.Point(20, 257);
+            this.lblFeedback.Name = "lblFeedback";
+            this.lblFeedback.Size = new System.Drawing.Size(286, 28);
+            this.lblFeedback.TabIndex = 2;
+            this.lblFeedback.Text = "Please give your feedback";
+            // 
+            // lblPrintBill
+            // 
+            this.lblPrintBill.AutoSize = true;
+            this.lblPrintBill.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrintBill.Location = new System.Drawing.Point(20, 162);
+            this.lblPrintBill.Name = "lblPrintBill";
+            this.lblPrintBill.Size = new System.Drawing.Size(307, 28);
+            this.lblPrintBill.TabIndex = 1;
+            this.lblPrintBill.Text = "Would you like to print bill?";
+            // 
+            // lblPayment
+            // 
+            this.lblPayment.AutoSize = true;
+            this.lblPayment.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPayment.Location = new System.Drawing.Point(20, 72);
+            this.lblPayment.Name = "lblPayment";
+            this.lblPayment.Size = new System.Drawing.Size(195, 28);
+            this.lblPayment.TabIndex = 0;
+            this.lblPayment.Text = "Payment Method";
             // 
             // Feedback
             // 

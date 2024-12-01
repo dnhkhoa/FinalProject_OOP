@@ -26,5 +26,17 @@ namespace FinalProject_OOP
         {
 
         }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for using our cafe's services", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txtFeedback.Clear();
+            cbbPayment.Items.Clear();
+            cbbPrintBill.Items.Clear();
+
+            OrderForm mainForm = new OrderForm();
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }
