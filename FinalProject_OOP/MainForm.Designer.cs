@@ -41,7 +41,8 @@
             this.uC_Income1 = new FinalProject_OOP.UC_Income();
             this.uC_RemoveItems1 = new FinalProject_OOP.UC_RemoveItems();
             this.uC_UpdateItems1 = new FinalProject_OOP.UC_UpdateItems();
-            this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems(this.uC_UpdateItems1);
+            this.uC_AddItems1 = new FinalProject_OOP.UC_AddItems();
+            this.lblRegister = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
+            this.panel1.Controls.Add(this.lblRegister);
             this.panel1.Controls.Add(this.btnExitMain);
             this.panel1.Controls.Add(this.linklblLogOut);
             this.panel1.Controls.Add(this.btnIncome);
@@ -76,8 +78,9 @@
             // linklblLogOut
             // 
             this.linklblLogOut.AutoSize = true;
-            this.linklblLogOut.Font = new System.Drawing.Font("Century", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+            this.linklblLogOut.Font = new System.Drawing.Font("Century", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblLogOut.ForeColor = System.Drawing.Color.MediumBlue;
             this.linklblLogOut.Location = new System.Drawing.Point(65, 482);
             this.linklblLogOut.Name = "linklblLogOut";
             this.linklblLogOut.Size = new System.Drawing.Size(75, 21);
@@ -150,7 +153,20 @@
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = false;
             this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
-
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.BurlyWood;
+            this.panel2.Controls.Add(this.uC_PlaceOrder1);
+            this.panel2.Controls.Add(this.uC_Income1);
+            this.panel2.Controls.Add(this.uC_RemoveItems1);
+            this.panel2.Controls.Add(this.uC_UpdateItems1);
+            this.panel2.Controls.Add(this.uC_AddItems1);
+            this.panel2.Location = new System.Drawing.Point(214, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(690, 527);
+            this.panel2.TabIndex = 1;
+            // 
             // uC_PlaceOrder1
             // 
             this.uC_PlaceOrder1.BackColor = System.Drawing.Color.BurlyWood;
@@ -191,19 +207,19 @@
             this.uC_AddItems1.Name = "uC_AddItems1";
             this.uC_AddItems1.Size = new System.Drawing.Size(690, 527);
             this.uC_AddItems1.TabIndex = 0;
-            // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.BurlyWood;
-            this.panel2.Controls.Add(this.uC_PlaceOrder1);
-            this.panel2.Controls.Add(this.uC_Income1);
-            this.panel2.Controls.Add(this.uC_RemoveItems1);
-            this.panel2.Controls.Add(this.uC_UpdateItems1);
-            this.panel2.Controls.Add(this.uC_AddItems1);
-            this.panel2.Location = new System.Drawing.Point(214, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(690, 527);
-            this.panel2.TabIndex = 1;
+            // lblRegister
             // 
+            this.lblRegister.AutoSize = true;
+            this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRegister.Font = new System.Drawing.Font("Century", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegister.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblRegister.Location = new System.Drawing.Point(66, 454);
+            this.lblRegister.Name = "lblRegister";
+            this.lblRegister.Size = new System.Drawing.Size(80, 22);
+            this.lblRegister.TabIndex = 12;
+            this.lblRegister.Text = "Register";
+            this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
             // 
             // MainForm
             // 
@@ -241,5 +257,6 @@
         private UC_RemoveItems uC_RemoveItems1;
         private UC_Income uC_Income1;
         private UC_PlaceOrder uC_PlaceOrder1;
+        private System.Windows.Forms.Label lblRegister;
     }
 }

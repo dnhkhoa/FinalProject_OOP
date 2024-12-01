@@ -114,5 +114,11 @@ namespace FinalProject_OOP
 
         }
 
+        private void lblRegister_Click(object sender, EventArgs e)
+        {
+            AdminRegister mainForm = new AdminRegister();
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }
